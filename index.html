@@ -23,11 +23,17 @@
 			        dataType:"JSON",
 			        type:"POST",
 			        data: data,
-			        error:function(err){
-			        	console.log('error', err);
-			        },
-			        success:function(res){
-			        	console.log('success');
+			        error:function(res){
+			        	if(res.status === 200){
+			        		$("#Name").val('');
+			        		$("#Email").val('');
+			        		$("#Message").val('');
+			        		$("#success").show();
+			        	}
+			        	else{
+			        		console.log('error');
+			        		$("#error").show();
+			        	}
 			        }
 			    })
 			});
@@ -95,10 +101,12 @@
 		<div class="contact" id="contact">
 			<h3>Feed Back</h3>
 			<p>Reader will be distracted by the readable content of a page when looking at its layout.</p>
+			<p id="success" style="display:none">Mail sent</p>
+			<p id="error" style="display:none">Mail not sent, please try again.</p>
 			<form>
 			<input type="text" class="textbox" id="Name" value="Name:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
 			<input type="text" class="textbox" id="Email" value="Email:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
-			<textarea value="Message:" id="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
+			<textarea value="Message:" id="Message" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
 			<input type="submit" value="Send" id="send">
 			</form>
 		</div>
