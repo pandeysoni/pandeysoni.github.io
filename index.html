@@ -11,8 +11,28 @@
 				event.preventDefault();
 				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
 			});
+			$("#send").click(function(event){		
+				event.preventDefault();
+				var data = {
+							"Name": $("#Name").val(),
+							"Email": $("#Email").val(),
+							"Message": $("#Message").val()
+							}
+				$.ajax({
+			        url:"https://mailsendapp.herokuapp.com/send",
+			        dataType:"JSON",
+			        type:"POST",
+			        data: data,
+			        error:function(err){
+			        	console.log('error', err);
+			        },
+			        success:function(res){
+			        	console.log('success');
+			        }
+			    })
+			});
 		});
-		</script>
+	</script>
 	</head>
 	<body>
 		<!---start-wrap--->
@@ -76,10 +96,10 @@
 			<h3>Feed Back</h3>
 			<p>Reader will be distracted by the readable content of a page when looking at its layout.</p>
 			<form>
-			<input type="text" class="textbox" value="Name:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
-			<input type="text" class="textbox" value="Email:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
-			<textarea value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
-			<input type="submit" value="Send">
+			<input type="text" class="textbox" id="Name" value="Name:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
+			<input type="text" class="textbox" id="Email" value="Email:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
+			<textarea value="Message:" id="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
+			<input type="submit" value="Send" id="send">
 			</form>
 		</div>
 		<div class="catch-me">
