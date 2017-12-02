@@ -35,7 +35,7 @@ Serverless is in trend because it dynamically manages the allocation of machine 
 * Webtasks
 I have used Amazon Web Services. Lambda Functions and API Gateway are services of amazon.  
 
-**_Which framework to use to make infrastructure better?_* *
+**_Which framework to use to make infrastructure better?_**
 [Serverless](https://serverless.com) is your toolkit for deploying and operating serverless architectures. Focus on your application, not your infrastructure.  
 
 **_What is Lambda function and Why it is mentioned here?_**  
