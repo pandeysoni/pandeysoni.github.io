@@ -6,7 +6,7 @@ layout: home
 ---
 
 <br/>
-<h2 align="center">Hi! <br/> I am a Backend Developer (Node.js, AWS Services) </h2>
+
 <br/>
 
 <br/>
