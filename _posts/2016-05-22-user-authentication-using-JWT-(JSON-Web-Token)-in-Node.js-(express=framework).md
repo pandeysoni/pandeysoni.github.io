@@ -142,7 +142,7 @@ function encrypt(password) {
     return crypted;
 }
 ```
-**_Verify New User_**: When new user register, that user need to verify link, otherwise user will not able to login.
+**_Verify New User_**: When new user register, that user need to verify link, otherwise user will not able to login.  
 **_Login User_**:
 ```js
 exports.login = function (req, res){
@@ -184,7 +184,7 @@ exports.login = function (req, res){
     })
 }
 ```
-Initially, we find user in our database, once user found in database, we decrypted entered password and matched with found user’s password and after successful match, we generate one token.
+Initially, we find user in our database, once user found in database, we decrypted entered password and matched with found user’s password and after successful match, we generate one token.  
 **_Forgot Password_**: In this case, we are using one package randomstring. install **_randomstring_** package:
 
 ```js
