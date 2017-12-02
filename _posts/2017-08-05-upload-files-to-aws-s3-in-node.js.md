@@ -153,19 +153,19 @@ const bucketName = “pandeysoni”
 ```
 
 **NOTE:**
-**_Bucket name must not contain uppercase characters._**
-**_Bucket name must start with a lowercase letter or number._**
-**_Bucket name must be between 3 and 63 characters long._**
-**createMainBucket Function:**
-S3.headBucket: check if bucket already exists or not. If bucket does not exist, then we will go to error part and create bucket with the defined name of bucket in bucketName. if bucket already exists, then this function will not create any bucket.
-**createItemObject Function:**
-params variable contains- Bucket, Key, ACL, and Body.
-**Bucket** — bucket name, where you would like to keep your file.
-**Key** — file name (it will overwrite, if file name already exists. So please note that your file name should be unique to keep all records to S3).
-**ACL** — defines accessibility permission to read the file.
-**Body** — file data.
-and use putObject method to upload file to s3. 
-Have a look to repository for complete working code, clone repository and run
+**_Bucket name must not contain uppercase characters._**  
+**_Bucket name must start with a lowercase letter or number._**  
+**_Bucket name must be between 3 and 63 characters long._**  
+**createMainBucket Function:**  
+S3.headBucket: check if bucket already exists or not. If bucket does not exist, then we will go to error part and create bucket with the defined name of bucket in bucketName. if bucket already exists, then this function will not create any bucket.  
+**createItemObject Function:**  
+params variable contains- Bucket, Key, ACL, and Body.  
+**Bucket** — bucket name, where you would like to keep your file.  
+**Key** — file name (it will overwrite, if file name already exists. So please note that your file name should be unique to keep all records to S3).  
+**ACL** — defines accessibility permission to read the file.  
+**Body** — file data.  
+and use putObject method to upload file to s3.   
+Have a look to repository for complete working code, clone repository and run  
 
 ```js
 npm install & node server
