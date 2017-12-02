@@ -88,7 +88,7 @@ console.log('Express app started on port ' + port);
 First of all, we required all the module dependencies. After that we used middleware instances body-parser, cookie-parser and express-session. We used Mongodb to store database. You can see we loaded db file, so our connection will established, when we will start our server.
 
 ```js
-const db = require(‘./server/config/db’)
+const db = require('./server/config/db')
 ```
 **_2. Setting up Database connection using Mongoose._**
 ```js
@@ -175,16 +175,15 @@ module.exports = new LocalStrategy({
 );
 ```
 Once the load returns with our user object the only thing left is to compare the Unknown User and password to see if there is a match.
-If it is a match, we let the user in (by returning the user to passport — return done(null, user)), if not we return an unauthorized error (by returning nothing to passport — return done(null, false, {message: ‘’})).
+If it is a match, we let the user in (by returning the user to passport — return done(null, user)), if not we return an unauthorized error (by returning nothing to passport — return done(null, false, {message: ''})).
 How route endpoint to use passport authentication.
 
 ```js
-app.post(‘/login’, passport.authenticate(‘local’, {}), User.login);
-
+app.post('/login', passport.authenticate('local', {}), User.login);
+```
 Feel free to download the full code for this post to see the full picture of how everything works together and customize it for your own needs. Have a look to repository for complete working code.
 [source code on github](https://github.com/pandeysoni/passport-authentication-in-node.js.git) 
 You can reach out to me for any doubt and suggestions. Please share this with others as well.
 
 Thanks!  
 Happy Coding!!
-```
