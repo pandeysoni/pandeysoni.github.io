@@ -38,13 +38,13 @@ In previous post [CRUD Operations in Node.js Application (Expresss Framework) us
 + README.md
 ```
 
-There will be some changes in server code like we need to load frontend directory in server side etc. Have a look at [repository](https://github.com/pandeysoni/nodeAngularApp) for new changes in server code. Before going to start development in Angular.js, first have a look to [ui-router](https://github.com/angular-ui/ui-router/wiki). Let’s start FrontEnd Side code, First we need to add bower.json file in root folder with defined specific dependencies which will require in our code. For installation of packages, we have two options:
+There will be some changes in server code like we need to load frontend directory in server side etc. Have a look at [repository](https://github.com/pandeysoni/nodeAngularApp) for new changes in server code. Before going to start development in Angular.js, first have a look to [ui-router](https://github.com/angular-ui/ui-router/wiki). Let's start FrontEnd Side code, First we need to add bower.json file in root folder with defined specific dependencies which will require in our code. For installation of packages, we have two options:
 
 1. Need to add one line in scripts (package.json file) and only run npm install.
 
 ```js
-“scripts”: {
-   “postinstall”: “bower install”
+"scripts": {
+   "postinstall": "bower install"
  },
 ```
 2. You can directly run bower install but in this case you will run npm install command as well.
@@ -161,19 +161,19 @@ In applicationModuleVendorDependencies, you can add more modules, according to y
 Create app folder in client/modules location. Create app.client.module.js file, which just register module.
 
 ```js
-ApplicationConfiguration.registerModule(‘app’);
+ApplicationConfiguration.registerModule('app');
 ```
 Create ui-routes in **app.client.routes.js** file in client/modules/app/config folder.
 
 ```js
-angular.module(‘app’).config([‘$stateProvider’, ‘$urlRouterProvider’, 
+angular.module('app').config(['$stateProvider', '$urlRouterProvider', 
    function($stateProvider, $urlRouterProvider) {
     // Home state routing
-     $urlRouterProvider.otherwise(‘/’);
+     $urlRouterProvider.otherwise('/');
      $stateProvider
-          .state(‘app’, {
-               url: ‘/’,
-               templateUrl: ‘modules/app/views/app.client.view.html’
+          .state('app', {
+               url: '/',
+               templateUrl: 'modules/app/views/app.client.view.html'
            });
  }
 ]);
@@ -182,7 +182,7 @@ In this route, we will add more routes.
 Create controller in **app.client.controller.js** file in client/modules/app /controllers folder. Here, we will add functionality.
 
 ```js
-angular.module(‘app’).controller(‘AppController’, [‘$scope’,
+angular.module('app').controller('AppController', ['$scope',
    function($scope) {
      $scope.function = function(){
      }
@@ -191,6 +191,7 @@ angular.module(‘app’).controller(‘AppController’, [‘$scope’,
 ```
 Create view in **app.client.view.html** file in client/modules/app/views folder. Here, we will add UI-view. You can create multiple modules as per your requirements, but remember everytime register module, controller name, service name should be unique.
 Feel free to download the full code for this post to see the full picture of how everything works together and customize it for your own needs. Have a look to repository for complete working code.
+[source code on github](https://github.com/pandeysoni/nodeAngularApp)  
 We will come with more about MongoDB and Node.js in future posts.
 You can reach out to me for any doubt and suggestions. Please share this with others as well.
 
