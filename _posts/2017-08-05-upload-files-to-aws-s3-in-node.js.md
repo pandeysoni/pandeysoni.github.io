@@ -172,8 +172,8 @@ npm install & node server
 ```
 You can see the port number in command prompt after sucessfull run. Access [localhost:3000](localhost:3000)
 
-Feel free to clone the full code for this post to see the full picture of how everything works together and customize it for your own needs and mark it starred, if it useful. Have a look to repository for complete working code.
-[source code on github](https://github.com/pandeysoni/file-upload-s3) 
+Feel free to clone the full code for this post to see the full picture of how everything works together and customize it for your own needs and mark it starred, if it useful. Have a look to repository for complete working code.  
+[source code on github](https://github.com/pandeysoni/file-upload-s3)   
 You can reach out to me for any doubt and suggestions. Please share this with others as well.
 
 Thanks!  
