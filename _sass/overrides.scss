@@ -92,7 +92,7 @@ img.img-portfolio {
 }
 
 .tag {
-  background: rgba(0, 0, 0, 0.79) !important;
+  background: $brand-color !important;
   padding: 5px 10px;
   color: #fff;
   border-radius: 5px;
@@ -103,4 +103,12 @@ img.img-portfolio {
 
 .pull-right {
   float: right;
+}
+
+a {
+    color: $brand-color;
+    text-decoration: none;
+    :visited {
+        color: $brand-color;
+    }
 }
