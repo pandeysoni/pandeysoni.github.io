@@ -5,7 +5,7 @@ description: Serverless | Lambda Functions | API Gateway
 keywords: serverless, aws, lambda, api gateway
 categories: [serverless, node.js, aws, lambda function, api gateway]
 ---
-![screenshot](../../../../images/serverless/image1.jpg?raw=true)
+![screenshot](../../../../images/serverless/image1.png?raw=true)
 
 Now a days, I am working on AWS services (API Gateway, Lambda Function, Kinesis Stream, DynamoDb, S3 etc.). In this article, I will explain How to do Serverless Programming.
 This is my first post on Serverless Programming. So, it will give an overview about:
