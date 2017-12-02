@@ -46,7 +46,7 @@ npm install mongoose — save
 ```
 Awesome. Now to test it's all working in the terminal type npm start and you shouldn't see any errors and if you navigate to http://127.0.0.0:3000 you will see following screen
 
-Design Schema: Create one model folder. Create a new file within that folder for whatever your data is going to be. In this case, I'm going to call it company.js and add below code to that file.
+** _Design Schema_ **: Create one model folder. Create a new file within that folder for whatever your data is going to be. In this case, I'm going to call it company.js and add below code to that file.
 
 ```js
 
