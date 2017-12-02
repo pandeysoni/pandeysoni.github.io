@@ -12,11 +12,11 @@ $spacing-unit:     30px !default;
 
 $text-color:       rgba(0, 0, 0, 0.84) !default;
 $background-color: #ffffff !default;
-$brand-color:      #2a7ae2 !default;
+$brand-color:      rgba(0, 0, 0, 0.79) !default;
 
-$grey-color:       #828282 !default;
-$grey-color-light: lighten($grey-color, 40%) !default;
-$grey-color-dark:  darken($grey-color, 25%) !default;
+$grey-color:       rgba(0, 0, 0, 0.84) !default;
+$grey-color-light: rgba(0, 0, 0, 0.84) !default;
+$grey-color-dark:  rgba(0, 0, 0, 0.84) !default;
 
 // Width of the content area
 $content-width:    800px !default;

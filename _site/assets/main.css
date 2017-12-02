@@ -69,10 +69,10 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: #2a7ae2;
+  color: rgba(0, 0, 0, 0.79);
   text-decoration: none; }
   a:visited {
-    color: #1756a9; }
+    color: rgba(0, 0, 0, 0.79); }
   a:hover {
     color: rgba(0, 0, 0, 0.84);
     text-decoration: underline; }
@@ -85,8 +85,8 @@ a {
  * Blockquotes
  */
 blockquote {
-  color: #828282;
-  border-left: 4px solid #e8e8e8;
+  color: rgba(0, 0, 0, 0.84);
+  border-left: 4px solid rgba(0, 0, 0, 0.84);
   padding-left: 15px;
   font-size: 23.625px;
   letter-spacing: -1px;
@@ -100,7 +100,7 @@ blockquote {
 pre,
 code {
   font-size: 19.6875px;
-  border: 1px solid #e8e8e8;
+  border: 1px solid rgba(0, 0, 0, 0.84);
   border-radius: 3px;
   background-color: #eef; }
 
@@ -147,7 +147,7 @@ pre {
   display: inline-block;
   vertical-align: middle; }
   .icon > svg path {
-    fill: #828282; }
+    fill: rgba(0, 0, 0, 0.84); }
 
 .social-media-list .icon {
   padding-right: 5px; }
@@ -158,8 +158,8 @@ pre {
  * Site header
  */
 .site-header {
-  border-top: 5px solid #424242;
-  border-bottom: 1px solid #e8e8e8;
+  border-top: 5px solid rgba(0, 0, 0, 0.84);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.84);
   min-height: 55.95px;
   position: relative; }
 
@@ -171,7 +171,7 @@ pre {
   margin-bottom: 0;
   float: left; }
   .site-title, .site-title:visited {
-    color: #424242; }
+    color: rgba(0, 0, 0, 0.84); }
 
 .site-nav {
   float: right;
@@ -191,7 +191,7 @@ pre {
       top: 9px;
       right: 15px;
       background-color: #ffffff;
-      border: 1px solid #e8e8e8;
+      border: 1px solid rgba(0, 0, 0, 0.84);
       border-radius: 5px;
       text-align: right; }
       .site-nav label[for="nav-trigger"] {
@@ -210,7 +210,7 @@ pre {
         padding-top: 10px;
         text-align: center; }
         .site-nav .menu-icon > svg path {
-          fill: #424242; }
+          fill: rgba(0, 0, 0, 0.84); }
       .site-nav input ~ .trigger {
         clear: both;
         display: none; }
@@ -228,7 +228,7 @@ pre {
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid #e8e8e8;
+  border-top: 1px solid rgba(0, 0, 0, 0.84);
   padding: 30px 0; }
 
 .footer-heading {
@@ -242,7 +242,7 @@ pre {
 
 .footer-col-wrapper {
   font-size: 19.6875px;
-  color: #828282;
+  color: rgba(0, 0, 0, 0.84);
   margin-left: -15px; }
 
 .footer-col {
@@ -298,7 +298,7 @@ pre {
 
 .post-meta {
   font-size: 18.375px;
-  color: #828282; }
+  color: rgba(0, 0, 0, 0.84); }
 
 .post-link {
   display: block;
@@ -547,7 +547,7 @@ img.img-portfolio {
   width: 200px; }
 
 .tag {
-  background: #2a7ae2;
+  background: rgba(0, 0, 0, 0.79);
   padding: 5px 10px;
   color: #fff;
   border-radius: 5px;
