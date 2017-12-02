@@ -18,7 +18,7 @@ This is my first post on Serverless Programming. So, it will give an overview ab
 
 Let’s take above questions one by one and take deep dive to find answer.  
 
-**_What is meant by Serverless?_**
+**_What is meant by Serverless?_**  
 “Serverless” → This does not imply →“there is no server”. Developers don’t need to care about server, only focus on development.  
 
 **_Why Serverless is trending?_**  

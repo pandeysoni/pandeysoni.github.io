@@ -2,15 +2,15 @@
 
 // Define defaults for each variable.
 
-$base-font-family: sans-serif;
-$base-font-size:   22px !default;
+$base-font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;;
+$base-font-size:   21px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
 
 $spacing-unit:     30px !default;
 
-$text-color:       #000 !default;
+$text-color:       rgba(0, 0, 0, 0.84) !default;
 $background-color: #ffffff !default;
 $brand-color:      #2a7ae2 !default;
 
