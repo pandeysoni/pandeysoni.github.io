@@ -206,7 +206,8 @@ exports.delete = function (req, res) {
 ```
 Initially, its structure looks tough, but when you start to do code, then you will realize, yeah, it sounds good to do code in a standardized way. I haven't explained the code because when you will just follow the steps and finish this then you will try to understand the code and it's easy.
 Feel free to download the full code for this post to see the full picture of how everything works together and customize it for your own needs. Have a look to the repository for complete working code.
-* [source code on github](https://github.com/pandeysoni/nodeapp)  
+[source code on github](https://github.com/pandeysoni/nodeapp)  
+
 We will discuss more MongoDB and Node.js in future posts.
 You can reach out to me for any doubt and suggestions. Please share this with others as well.
 
