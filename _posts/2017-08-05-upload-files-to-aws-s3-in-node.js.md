@@ -149,7 +149,7 @@ exports.displayForm = (req, res) => {
 Upload post method call upload function of controller, where we create bucket(if not exist) and upload that file into that bucket. I have defined
 
 ```js
-const bucketName = “pandeysoni”
+const bucketName = "pandeysoni"
 ```
 
 **NOTE:**
