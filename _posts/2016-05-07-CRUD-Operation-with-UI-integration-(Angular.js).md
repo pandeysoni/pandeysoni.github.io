@@ -48,7 +48,7 @@ There will be some changes in server code like we need to load frontend director
  },
 ```
 2. You can directly run bower install but in this case you will run npm install command as well.
-In client folder, create on **application.js** file and add below code in that file. This file have configuration of application.
+In client folder, create on **_application.js_** file and add below code in that file. This file have configuration of application.
 
 ```js
 'use strict';
@@ -76,7 +76,7 @@ angular.element(document).ready(function() {
 	angular.bootstrap(document, [ApplicationConfiguration.applicationModuleName]);
 });
 ```
-Now create **config.js** file in client folder, this file add module dependency and register new modules.
+Now create **_config.js_** file in client folder, this file add module dependency and register new modules.
 
 ```js
 'use strict';
@@ -103,7 +103,7 @@ var ApplicationConfiguration = (function() {
 	};
 })();
 ```
-In applicationModuleVendorDependencies, you can add more modules, according to your need. Now create **index.html** file, and add all bower_components, modules and all stylesheets and javascripts file here.
+In applicationModuleVendorDependencies, you can add more modules, according to your need. Now create **_index.html_** file, and add all bower_components, modules and all stylesheets and javascripts file here.
 
 ```html
 <!-- index.html -->
@@ -163,7 +163,7 @@ Create app folder in client/modules location. Create app.client.module.js file, 
 ```js
 ApplicationConfiguration.registerModule('app');
 ```
-Create ui-routes in **app.client.routes.js** file in client/modules/app/config folder.
+Create ui-routes in **_app.client.routes.js_** file in client/modules/app/config folder.
 
 ```js
 angular.module('app').config(['$stateProvider', '$urlRouterProvider', 
@@ -179,7 +179,7 @@ angular.module('app').config(['$stateProvider', '$urlRouterProvider',
 ]);
 ```
 In this route, we will add more routes.
-Create controller in **app.client.controller.js** file in client/modules/app /controllers folder. Here, we will add functionality.
+Create controller in **_app.client.controller.js_** file in client/modules/app /controllers folder. Here, we will add functionality.
 
 ```js
 angular.module('app').controller('AppController', ['$scope',
@@ -189,7 +189,7 @@ angular.module('app').controller('AppController', ['$scope',
    }
 ]);
 ```
-Create view in **app.client.view.html** file in client/modules/app/views folder. Here, we will add UI-view. You can create multiple modules as per your requirements, but remember everytime register module, controller name, service name should be unique.
+Create view in **_app.client.view.html_** file in client/modules/app/views folder. Here, we will add UI-view. You can create multiple modules as per your requirements, but remember everytime register module, controller name, service name should be unique.
 Feel free to download the full code for this post to see the full picture of how everything works together and customize it for your own needs. Have a look to repository for complete working code.
 [source code on github](https://github.com/pandeysoni/nodeAngularApp)  
 We will come with more about MongoDB and Node.js in future posts.
