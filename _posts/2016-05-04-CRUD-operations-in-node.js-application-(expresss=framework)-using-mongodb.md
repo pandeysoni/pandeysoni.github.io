@@ -42,7 +42,7 @@ Next, open up app.js and let's add our db.js file to the variables. by adding th
 We need to add a few more packages to our package.json file as a dependency.
 
 ```js
-npm install mongoose — save
+npm install mongoose —- save
 ```
 Awesome. Now to test it's all working in the terminal type npm start and you shouldn't see any errors and if you navigate to http://127.0.0.0:3000 you will see following screen
 

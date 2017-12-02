@@ -188,7 +188,7 @@ Initially, we find user in our database, once user found in database, we decrypt
 **_Forgot Password_**: In this case, we are using one package randomstring. install **_randomstring_** package:
 
 ```js
-npm install — save randomstring
+npm install —- save randomstring
 ```
 
 ```js
