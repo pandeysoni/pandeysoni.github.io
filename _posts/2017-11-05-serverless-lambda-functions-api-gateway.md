@@ -5,41 +5,40 @@ description: Serverless | Lambda Functions | API Gateway
 keywords: serverless, aws, lambda, api gateway
 categories: [serverless, node.js, aws, lambda function, api gateway]
 ---
+![screenshot](../../../../images/serverless/image1.jpg?raw=true)
 
-I've been developing products on [backbone.js](http://github.com/documentcloud/backbone/) on the front end for past couple of months and I feel that the development is rather slow when compared to the server side (have you felt the same?). Here I am talking about fairly large applications in which you are working with collaborators.
+Now a days, I am working on AWS services (API Gateway, Lambda Function, Kinesis Stream, DynamoDb, S3 etc.). In this article, I will explain How to do Serverless Programming.
+This is my first post on Serverless Programming. So, it will give an overview about:
+* What is meant by Serverless?
+* Why Serverless is trending?
+* Which providers are in market to provide these services?
+* Which framework to use to make infrastructure better?
+* What is Lambda function and Why it is mentioned here?
+* How is API Gateway related to Lambda?
 
-I want to address a few things in this post
+Let’s take above questions one by one and take deep dive to find answer.
+**_What is meant by Serverless?_**
+“Serverless” → This does not imply →“there is no server”. Developers don’t need to care about server, only focus on development.
+**_Why Serverless is trending?_**
+Serverless is in trend because it dynamically manages the allocation of machine resources and that computing is economical. Serverless computing is a cloud computing execution model in which the cloud provider dynamically manages the allocation of machine resources. Pricing is based on the actual amount of resource consumed by an application, rather than on pre-purchased units of capacity.
+**_Which providers are in market to provide these services?_**
 
-1. Why go with purely client side approach?
-2. Trade-offs of client side approach
+* Web Services
+* Microsoft Azure
+* IBM OpenWhisk
+* Google Cloud Platform
+* Kubeless
+* Spotinst
+* Webtasks
+I have used Amazon Web Services. Lambda Functions and API Gateway are services of amazon.  
 
-## Why go with purely client side approach?
-
-1. Responsiveness
-2. RESTful interface
-
-One of the main reasons I feel like going with this approach is the **responsiveness**. If you use tools like [grunt.js](https://github.com/gruntjs/grunt), you can just have 1 css file, 1 js file and 1 image sprite (yes there is an awesome module called [node-spritesheets](https://github.com/richardbutler/node-spritesheet)) and 1 html file. The whole app resides on the  browser and its super fast and responsive! With this you'd also get to build a neat **RESTful** interface. These are the only two main advantages I see.
-
-## Trade-offs of client side approach
-
-1. No hard and fast conventions
-2. Development time is rather slow
-3. Hard to maintain
-
-When I say convention think about the conventions that you'd follow while developing an application server side and then compare it with the conventions that you'd follow with the client side approach (forget about the designs for a moment).
-
-One of the differences between client side approach and server side approach is that - you don't get to use tools that make your development faster. When I say tools here, it means stuff like generators etc. And there is no convention based approach, like if you place a file somewhere, it would not automatically perform something out of the box. So you need to manually wire up all the connections between these components, which also makes it a bit hard to maintain.
-
-What I love about the js community is its a free world! You can write code however you want! (not literally) There are numerous advantages! The drawback here being the lack of conventions on how to use them with each other. Because of this, there are chances that you might end up doing a particular task in a very complex and time consuming way (as opposed to the way you'd have done if there was a convention) Of-course you can bring some conventions on a project level, that's what happens all the time but even there, its a bit hard to maintain the code - coz not everyone would write code of the same quality, simplicity. Then you end up doing code reviews.
-
-What do you think? Do you feel the same? I would like to know about your experiences.
-
-**Tools and libs I've been using:**
-
-* [backbone.js](http://github.com/documentcloud/backbone/)
-* [backbone.layoutmanager](http://github.com/tbranyen/backbone.layoutmanager)
-* [backbone-boilerplate](http://github.com/tbranyen/backbone-boilerplate)
-* [grunt-bbb](http://github.com/backbone-boilerplate/grunt-bbb)
-* [twitter bootstrap](http://twitter.github.com/bootstrap)
-
-I haven't tried any other libs like angular or meteor...
+**_Which framework to use to make infrastructure better?__*  
+[Serverless](https://serverless.com) is your toolkit for deploying and operating serverless architectures. Focus on your application, not your infrastructure.  
+**_What is Lambda function and Why it is mentioned here?_**  
+Lambda function is knows as 'Function as a Service (FaaS)'. AWS Lambda lets you run code without provisioning or managing servers. You pay only for the compute time you consume — there is no charge when your code is not running. With Lambda, you can run code for virtually any type of application or backend service — all with zero administration. Just upload your code and Lambda takes care of everything required to run and scale your code with high availability.  
+**_How is API Gateway related to Lambda?_**  
+Routes are defined in configuration and each route is associated with a Faas Function. When an API Gateway recieves a request, it finds the routing configuration matching the request and then calls the relevant Faas function. Typically, the API Gateway will allow mapping from http request parameters to input arguments for the FaaS function. Serverless framework makes working with API Gateway and Lambda significantly easier than using the first principles provided by AWS.  
+In next article, I will explain about “Structure of Serverless Framework using Lambda and API Gateway.”  
+You can reach out to me for any doubt and suggestions. Please share this with others as well.  
+Thanks!  
+Happy Coding!!  
