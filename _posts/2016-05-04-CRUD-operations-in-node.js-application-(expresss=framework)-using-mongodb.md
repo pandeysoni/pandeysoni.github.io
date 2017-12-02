@@ -12,7 +12,7 @@ npm install -g express
 npm install -g express-generator
 ```
 
-Great. Now we’ve got Express & the generator installed as a global command on our system. Use below command to create express basic structure:
+Great. Now we've got Express & the generator installed as a global command on our system. Use below command to create express basic structure:
 
 ```js
 express nodeapp
@@ -25,28 +25,28 @@ cd nodeapp
 npm install
 ```
 
-Now check that, do you have MongoDB setup? If you haven’t, go to [MongoDB Link](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/) and follow the steps and ready to start our project and one another solution is to avoid MongoDB installation steps, you can put your database on [mongolab](http://mongolab.com) then you don’t need MongoDB locally on your system. Great, now we are going to place our database connection string using mongoose in one another file db.js in the config folder of root and put this piece of code in that file:
+Now check that, do you have MongoDB setup? If you haven't, go to [MongoDB Link](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/) and follow the steps and ready to start our project and one another solution is to avoid MongoDB installation steps, you can put your database on [mongolab](http://mongolab.com) then you don't need MongoDB locally on your system. Great, now we are going to place our database connection string using mongoose in one another file db.js in the config folder of root and put this piece of code in that file:
 
 ```js
-var Mongoose = require(‘mongoose’);
+var Mongoose = require('mongoose');
 Mongoose.connect('mongodb://localhost/nodeappdb'); 
 var db = Mongoose.connection;
-db.on(‘error’, console.error.bind(console, ‘connection error’));
-db.once(‘open’, function callback() {
-  console.log(“Connection with database succeeded.”);
+db.on('error', console.error.bind(console, 'connection error'));
+db.once('open', function callback() {
+  console.log("Connection with database succeeded."");
 });
 exports.db = db;
 ```
 
-Next, open up app.js and let's add our db.js file to the variables. by adding the line var db = require(‘./config/db’);
+Next, open up app.js and let's add our db.js file to the variables. by adding the line var db = require('./config/db');
 We need to add a few more packages to our package.json file as a dependency.
 
 ```js
 npm install mongoose — save
 ```
-Awesome. Now to test it’s all working in the terminal type npm start and you shouldn’t see any errors and if you navigate to http://127.0.0.0:3000 you will see following screen
+Awesome. Now to test it's all working in the terminal type npm start and you shouldn't see any errors and if you navigate to http://127.0.0.0:3000 you will see following screen
 
-Design Schema: Create one model folder. Create a new file within that folder for whatever your data is going to be. In this case, I’m going to call it company.js and add below code to that file.
+Design Schema: Create one model folder. Create a new file within that folder for whatever your data is going to be. In this case, I'm going to call it company.js and add below code to that file.
 
 ```js
 
@@ -119,37 +119,37 @@ app.use(router);
 and change this piece of code
 
 ```js
-app.use(logger(‘dev’));
+app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, ‘public’)));
+app.use(express.static(path.join(__dirname, 'public')));
 ```
 
 use router in place of app, now your code will look like this:
 
 ```js
-router.use(logger(‘dev’));
+router.use(logger('dev'));
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: false }));
 router.use(cookieParser());
-router.use(express.static(path.join(__dirname, ‘public’)));
+router.use(express.static(path.join(__dirname, 'public')));
 ```
 
 and append one line code in this:
 
 ```js
-require(‘./routes/company’)(router);
+require('./routes/company')(router);
 ```
 In route folder, create one company.js file. Add this code in that file:
 ```js
-var Company= require(‘./controller/company’);
+var Company= require('./controller/company');
 // API Server Endpoints
 module.exports = function(router){
- router.post(‘/company’, Company.create),
- router.get(‘/company/:id’, Company.get),
- router.put(‘/company/:id’, Company.update),
- router.delete(‘/company/:id’, Company.delete)
+ router.post('/company', Company.create),
+ router.get('/company/:id', Company.get),
+ router.put('/company/:id', Company.update),
+ router.delete('/company/:id', Company.delete)
 }
 ```
 Now, as you can see, we need to create controller folder and there, we will create one company.js file.
@@ -204,7 +204,7 @@ exports.delete = function (req, res) {
     });
 }
 ```
-Initially, its structure looks tough, but when you start to do code, then you will realize, yeah, it sounds good to do code in a standardized way. I haven’t explained the code because when you will just follow the steps and finish this then you will try to understand the code and it’s easy.
+Initially, its structure looks tough, but when you start to do code, then you will realize, yeah, it sounds good to do code in a standardized way. I haven't explained the code because when you will just follow the steps and finish this then you will try to understand the code and it's easy.
 Feel free to download the full code for this post to see the full picture of how everything works together and customize it for your own needs. Have a look to the repository for complete working code.
 * [source code on github](https://github.com/pandeysoni/nodeapp)
 We will discuss more MongoDB and Node.js in future posts.
