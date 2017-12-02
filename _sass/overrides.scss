@@ -106,9 +106,9 @@ img.img-portfolio {
 }
 
 a {
-    color: $brand-color;
+    color: $brand-color !important;
     text-decoration: none;
     :visited {
-        color: $brand-color;
+        color: $brand-color !important;
     }
 }
