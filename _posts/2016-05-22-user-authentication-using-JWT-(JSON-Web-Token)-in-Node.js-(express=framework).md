@@ -1,9 +1,9 @@
 ---
 layout: post
-title: pagination using mongoose, express and jade
-description: Pagination using mongoose, express and jade.
-keywords: mongoose, express, jade, pagination
-categories: [mongoose, express, jade, pagination, node.js]
+title: User Authentication using JWT (JSON Web Token) in Node.js (Express Framework)
+description: User Authentication using JWT (JSON Web Token) in Node.js (Express Framework)
+keywords: node.js, express, jwt, authentication
+categories: [mongoose, express, node, jwt, authentication, node.js]
 ---
 
 Ok, here's how to create simple pagination using jade and mongoose.

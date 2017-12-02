@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Trade-offs of purely client side apps
-date: 2012-10-02 16:21:52 UTC
-description: Trade-offs of client side development approach
-keywords: backbone.js, client, development, api
-categories: [backbone.js, javascript]
+title: Serverless | Lambda Functions | API Gateway
+description: Serverless | Lambda Functions | API Gateway
+keywords: serverless, aws, lambda, api gateway
+categories: [serverless, node.js, aws, lambda function, api gateway]
 ---
 
 I've been developing products on [backbone.js](http://github.com/documentcloud/backbone/) on the front end for past couple of months and I feel that the development is rather slow when compared to the server side (have you felt the same?). Here I am talking about fairly large applications in which you are working with collaborators.

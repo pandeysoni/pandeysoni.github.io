@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Manipulate and upload images to cloud
-description: A node module to resize, crop images + cloud uploads
-keywords: nodejs, images, S3, amazon, rackspace, cloudfiles, imagemagick, imager
-categories: [imager, uploads, javascript]
+title: User authentication using passport.js in Node.js
+description: User authentication using passport.js in Node.js
+keywords: nodejs, mongodb, express.js, passport, auth
+categories: [auth, passport, node]
 ---
 
 A Node.js module to resize, crop, manipulate images, maintain different presets of the same image and upload to rackspace cloudfiles. Its completely asynchronous.

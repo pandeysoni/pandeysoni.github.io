@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Install/update node.js in just one command!
-date: 2012-09-26 23:50:00 UTC
-description: Install or update node.js in one command
-keywords: install, nodejs, update
-categories: [node.js, bash]
+title: Upload files to AWS S3 in Node.js
+description: Upload files to AWS S3 in Node.js
+keywords: node.js, express, s3
+categories: [node.js, aws s3, express]
 ---
 
 A simple script to install/update the much frequently updated [node.js](http://nodejs.org) platform.

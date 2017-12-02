@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Dev environment setup!
-description: Just a small writeup on how I have configured my development environment.
-keywords: bash, development, environment, dotfiles
-categories: [dotfiles, development, bash]
+title: CRUD Operation (Node.js + Express + MongoDB) with UI integration (Angular.js )
+description: CRUD Operation (Node.js + Express + MongoDB) with UI integration (Angular.js )
+keywords: node.js, express.js, mongodb, angular
+categories: [crud, node, express, mongodb, angular]
 ---
 
 I am a node.js developer and in my everyday development I mostly have node.js , mongodb servers running, bash is my default shell, I was using sublimetext as my default editor until textmate was opensourced yesterday!

@@ -1,10 +1,9 @@
 ---
 layout: post
-title: node-imager now supports amazon S3
-date: 2012-09-25 21:32:57 UTC
-description: node-imager now supports amazon s3 storage
-keywords: nodejs, amazon s3, imager
-categories: [imager, s3]
+title: Nodemailer Service in Node.js using SMTP and xoauth2
+description: Nodemailer Service in Node.js using SMTP and xoauth2
+keywords: nodejs, nodemailer, express, smtp, xoauth2
+categories: [nodemailer, node, express]
 ---
 
 In my [previous post](/2012/09/15/node-module-to-manipulate-images-and-upload-to-rackspace/) I described how to use node-imager to upload images (with different presets) to rackspace cloudfiles. Today I have added support for amazon S3.

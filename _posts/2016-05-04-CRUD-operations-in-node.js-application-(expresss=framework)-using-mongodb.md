@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Structuring express.js applications
-description: Breaking down app.js
-keywords: node.js, express.js, mongoose
-categories: [mongoose, pagination]
+title: CRUD Operations in Node.js Application (Expresss Framework) using mongodb
+description: CRUD Operations in Node.js Application (Expresss Framework) using mongodb
+keywords: node.js, express.js, mongodb
+categories: [crud, mongodb, node.js, express]
 ---
 
 A working draft of the app architecture is in progress, visit the boilerplate [wiki](https://github.com/madhums/node-express-mongoose/wiki)
