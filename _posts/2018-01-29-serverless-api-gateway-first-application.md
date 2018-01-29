@@ -78,16 +78,14 @@ custom:
 
 Give your own service name, i have choosen **_user-service_**.   
 Provider properties details:  
- * name - We are using **_aws_**.  
- * profile - set profile on your system. Please check [link](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) for setup.  
- 
- * runtime - AWS highest version supported till now | nodejs6.10  
- * region - In which region you want to deploy your functions. Please check [region list](https://docs.aws.amazon.com/general/latest/gr/rande.html).  
- 
- * stage - it's upto you, I prefer dev | qc | prod.   
- * memorySize - It is optional, in MB, default is 1024. Minimum = 128 MB / Maximum = 3008 MB (with 64 MB increments). If the maximum memory use is exceeded, function invocation will be terminated. I keep it 128 MB.  
- * timeout - It is also optional, in seconds, default is 6. Maximum execution duration per request  300 seconds, I keep it 20 seconds max.  
- * versionFunctions - By default, the framework creates function versions for every deploy. This behavior is optional, and can be turned off in cases where you don't invoke past versions by their qualifier. I keep it as a false.  
+ * _name_ - We are using **_aws_**.  
+ * _profile_ - set profile on your system. Please check [link](https://goo.gl/ZbFVFp) for setup.  
+ * _runtime_ - AWS highest version supported till now | nodejs6.10  
+ * _region_ - In which region you want to deploy your functions. Please check [region list](https://goo.gl/8k7Wo3).  
+ * _stage_ - it's upto you, I prefer dev | qc | prod.   
+ * _memorySize_ - It is optional, in MB, default is 1024. Minimum = 128 MB / Maximum = 3008 MB (with 64 MB increments). If the maximum memory use is exceeded, function invocation will be terminated. I keep it 128 MB.  
+ * _timeout_ - It is also optional, in seconds, default is 6. Maximum execution duration per request  300 seconds, I keep it 20 seconds max.  
+ * _versionFunctions_ - By default, the framework creates function versions for every deploy. This behavior is optional, and can be turned off in cases where you don't invoke past versions by their qualifier. I keep it as a false.  
 
 If you are using AWS as a provider, all functions inside the service are AWS Lambda functions and all of the Lambda functions in your serverless service can be found in serverless.yml under the functions property. You can add as many functions as you want within this property. The code will look like this:
 
@@ -124,8 +122,8 @@ functions:
           cors: true
 ```
 Functions properties details:
- * handler - The handler property points to the file and module containing the code you want to run in your function.
- * events - All events in the service are anything in AWS that can trigger an AWS Lambda function, like an S3 bucket upload, an SNS topic, and HTTP endpoints created via API Gateway. Here, we are using HTTP endpoints created via API Gateway. The events property is an array, because it's possible for functions to be triggered by multiple events, as shown. You can set multiple Events per Function, as long as that is supported by AWS.
+ * _handler_ - The handler property points to the file and module containing the code you want to run in your function.
+ * _events_ - All events in the service are anything in AWS that can trigger an AWS Lambda function, like an S3 bucket upload, an SNS topic, and HTTP endpoints created via API Gateway. Here, we are using HTTP endpoints created via API Gateway. The events property is an array, because it's possible for functions to be triggered by multiple events, as shown. You can set multiple Events per Function, as long as that is supported by AWS.
 
 To deploy or update your Functions, Events and Infrastructure, run **_serverless deploy_**.  
 Feel free to download the full code for this post to see the full picture of how everything works together and customize it for your own needs. Have a look to repository to get complete idea.   
