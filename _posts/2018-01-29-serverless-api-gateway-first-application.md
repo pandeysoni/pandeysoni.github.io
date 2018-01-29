@@ -80,8 +80,10 @@ Give your own service name, i have choosen **_user-service_**.
 Provider properties details:  
  * name - We are using **_aws_**.  
  * profile - set profile on your system. Please check [link](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) for setup.  
+ 
  * runtime - AWS highest version supported till now | nodejs6.10  
  * region - In which region you want to deploy your functions. Please check [region list](https://docs.aws.amazon.com/general/latest/gr/rande.html).  
+ 
  * stage - it's upto you, I prefer dev | qc | prod.   
  * memorySize - It is optional, in MB, default is 1024. Minimum = 128 MB / Maximum = 3008 MB (with 64 MB increments). If the maximum memory use is exceeded, function invocation will be terminated. I keep it 128 MB.  
  * timeout - It is also optional, in seconds, default is 6. Maximum execution duration per request  300 seconds, I keep it 20 seconds max.  
