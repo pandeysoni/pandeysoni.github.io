@@ -80,9 +80,9 @@ Give your own service name, i have choosen **_user-service_**.
 Provider properties details:  
  * _name_ - We are using **_aws_**.  
  * _profile_ - set profile on your system. Please check [link](https://goo.gl/ZbFVFp) for setup.  
- * _runtime_ - AWS highest version supported till now | nodejs6.10  
+ * _runtime_ - AWS highest version supported till now nodejs6.10  
  * _region_ - In which region you want to deploy your functions. Please check [region list](https://goo.gl/8k7Wo3).  
- * _stage_ - it's upto you, I prefer dev | qc | prod.   
+ * _stage_ - it's upto you, I prefer dev, qc or prod.   
  * _memorySize_ - It is optional, in MB, default is 1024. Minimum = 128 MB / Maximum = 3008 MB (with 64 MB increments). If the maximum memory use is exceeded, function invocation will be terminated. I keep it 128 MB.  
  * _timeout_ - It is also optional, in seconds, default is 6. Maximum execution duration per request  300 seconds, I keep it 20 seconds max.  
  * _versionFunctions_ - By default, the framework creates function versions for every deploy. This behavior is optional, and can be turned off in cases where you don't invoke past versions by their qualifier. I keep it as a false.  
