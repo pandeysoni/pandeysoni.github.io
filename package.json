@@ -13,10 +13,11 @@
     "gatsby": "^2.0.76",
     "gatsby-link": "^1.6.34",
     "gatsby-plugin-netlify-cms": "^3.0.10",
+    "gatsby-plugin-sharp": "^2.0.15"
     "gatsby-source-filesystem": "^1.5.11",
     "gatsby-transformer-remark": "^1.7.28",
     "react": "^16.5.1",
-	  "react-dom": "^16.5.1"
+    "react-dom": "^16.5.1"
   },
   "repository": {
     "type": "git",
