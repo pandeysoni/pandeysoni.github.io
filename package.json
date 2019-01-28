@@ -6,17 +6,15 @@
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
-    "start": "npm run develop",
     "build": "gatsby build",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "serve": "gatsby serve"
   },
   "dependencies": {
     "gatsby": "^2.0.76",
-    "gatsby-plugin-netlify-cms": "^3.0.10",
-    "netlify-cms": "^2.3.3",
-    "react": "^16.5.1",
-    "react-dom": "^16.5.1"
+   "gatsby-link": "^1.6.34",
+    "gatsby-plugin-netlify-cms": "^1.0.0",
+    "gatsby-source-filesystem": "^1.5.11",
+    "gatsby-transformer-remark": "^1.7.28"
   },
   "repository": {
     "type": "git",
