@@ -1,0 +1,68 @@
+---
+path: 2016/05/02/node.js-single-file-application-using-express-framework
+date: 2016-05-02T16:25:47.068Z
+title: Node.js Single File Application using Express Framework
+---
+To structured our application, simple routing, and support for Connect middleware, allowing many extensions and useful features, we have used Express framework. 
+
+First, create a directory named "expressapp", change to it, and run npm init. Then install express as a dependency.
+
+
+
+For example
+
+`mkdir expressapp`
+
+`cd expressapp`
+
+`npm init`
+
+`entry point: (index.js) app.js`
+
+`npm install express --save`
+
+
+
+In the expressapp directory, create a file named app.js and add the following code:
+
+var express = require('express');
+
+var app = express();
+
+app.get('/', function (req, res) {
+
+  res.send('welcome to home page!');
+
+});
+
+app.get('/about', function (req, res) {
+
+  res.send('welcome to about page!');
+
+});
+
+app.listen(9000, function () {
+
+  console.log('Example app listening on port 9000!');
+
+});
+
+The app starts a server and listens on port 3000 for connections. The app responds with “welcome to home page!” for requests to the root URL (/) or route and responds with “welcome to about page!” for requests to the root URL (/about) or route. For every other path, it will respond with a 404 Not Found. Run the app with the following command:
+
+```
+node app.js
+```
+
+Then, load http://localhost:9000/ in a browser to see the output.
+
+Feel free to download the full code for this post to see the full picture of how everything works together and customize it for your own needs. Have a look at the repository for complete working code.
+
+[Gituhub Repository](https://github.com/pandeysoni/expressapp)
+
+You can reach out to me for any doubt and suggestions. Please share this with others as well.
+
+
+
+Thanks!   
+
+Happy Coding!!
