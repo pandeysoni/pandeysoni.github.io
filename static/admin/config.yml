@@ -1,6 +1,6 @@
 backend:
   name: github
-  branch: master
+  repo: pandeysoni/pandeysoni.github.io
 
 media_folder: static/assets
 public_folder: assets
