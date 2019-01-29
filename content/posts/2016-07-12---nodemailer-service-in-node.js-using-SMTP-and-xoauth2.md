@@ -1,17 +1,16 @@
 ---
+template: post
 title: Nodemailer Service in Node.js using SMTP and xoauth2
-date: "2016-07-12T22:40:32.169Z"
-template: "post"
+slug: /2016/07/12/user-authentication-using-passport.js-in-node.js/
 draft: false
-slug: "/2016/07/12/user-authentication-using-passport.js-in-node.js/"
-category: "Javascript"
+date: '2016-07-12T22:40:32.169Z'
+description: Nodemailer Service in Node.js using SMTP and xoauth2.
+category: Javascript
 tags:
-  - "Nodemailer"
-  - "Node.js"
-  - "Express"
-description: "Nodemailer Service in Node.js using SMTP and xoauth2."
+  - Nodemailer
+  - Node.js
+  - Express
 ---
-
 Here, we will learn how to send a mail in Node.js using Nodemailer Package. What we are planning to use here:
 
 * Node.js
@@ -21,17 +20,18 @@ Here, we will learn how to send a mail in Node.js using Nodemailer Package. What
 I assume, you all are aware with Node.js, Express Framework and Mongodb. If not, please have a look on my previous posts:
 
 1. [Node.js Single File Application using Express Framework.](http://thepandeysoni.org/2016/02/05/node.js-single-file-application-using-express-framework/)
-1. [CRUD Operations in Node.js Application (Expresss Framework) using mongodb.](http://thepandeysoni.org/2016/05/04/CRUD-operations-in-node.js-application-(expresss=framework)-using-mongodb/)
+2. [CRUD Operations in Node.js Application (Expresss Framework) using mongodb.](http://thepandeysoni.org/2016/05/04/CRUD-operations-in-node.js-application-(expresss=framework)-using-mongodb/)
 
 These articles will atleast give you an overview about it.
 
-**_What is Nodemailer Package?_**
+_**What is Nodemailer Package?**_
 Send e-mails with Node.JS — easy as cake! [Nodemailer](http://nodemailer.com/)
 Copyright © Nodemailer
 Here, we will create application which will do following things only:
+
 1. Nodemailer setup using SMTP (here you will use username and password).
 2. Nodemailer setup using xoauth2 (here you will need user, clientId, clientSecret, refreshToken, accessToken).
-Project Structure will be like this:
+   Project Structure will be like this:
 
 ```js
 + server
@@ -45,7 +45,7 @@ Project Structure will be like this:
 
 Here, we don’t save data in database, so we are not using any database. You can also have a look to complete [MEAN Structure](http://thepandeysoni.org/2016/04/05/CRUD-Operation-with-UI-integration-(Angular.js)/).
 
-**_1. Setting up Server using Express Framework._**
+_**1. Setting up Server using Express Framework.**_
 
 ```js
 /**
@@ -70,9 +70,9 @@ app.listen(port);
 console.log('Express app started on port ' + port);
 ```
 
-First of all, we required all the module dependencies. After that we used middleware instances **_body-parser_**, express.
+First of all, we required all the module dependencies. After that we used middleware instances _**body-parser**_, express.
 
-**_2. Setting up Nodemailer using SMTP_**
+_**2. Setting up Nodemailer using SMTP**_
 
 ```js
 const nodemailer = require('nodemailer')
@@ -107,6 +107,7 @@ module.exports = function (app) {
     })
 };
 ```
+
 We need to install nodemailer 0.7.1 version as a dependency.
 To use Gmail you may need to configure [“Allow Less Secure Apps”](https://myaccount.google.com/lesssecureapps) in your Gmail account unless you are using 2FA in which case you would have to create an [Application Specific](https://accounts.google.com/signin/v2/sl/pwd?service=accountsettings&passive=1209600&osid=1&continue=https%3A%2F%2Fmyaccount.google.com%2Fapppasswords&followup=https%3A%2F%2Fmyaccount.google.com%2Fapppasswords&rart=ANgoxccAm2w1A0J-N26zWpCeX4LDTofbTAhWrEoFiqtsOgoxrhEWqXZy9OD3st7E4672IoO7MNDn8qvOk2aAV6RstlZxCEfvpg&authuser=0&flowName=GlifWebSignIn&flowEntry=ServiceLogin) password. You also may need to unlock your account with [”Allow access to your Google account”](https://accounts.google.com/b/0/DisplayUnlockCaptcha) to use SMTP. Copyright © [Nodemailer](https://github.com/nodemailer/nodemailer)
 
@@ -123,6 +124,7 @@ module.exports = {
   mailPass: senderPass
 }
 ```
+
 We are parsing body data in mailOptions in this format:
 
 ```js
@@ -132,8 +134,9 @@ We are parsing body data in mailOptions in this format:
    "text":"Hey, You Recieved message from your nodemailer package"
 }
 ```
+
 Transporter Object have one function named sendMail, which will send data using mailOptions. 
-**_3. Nodemailer setup using xoauth2._**
+_**3. Nodemailer setup using xoauth2.**_
 Here, transporter object will be change only
 
 ```js
@@ -151,36 +154,39 @@ var smtpTransport = nodemailer.createTransport("SMTP",{
         }
 });
 ```
+
 We need to install xoauth2 and need to setup clientId, clientSecret and refreshToken.
 
-**_Step I: Obtain OAuth 2.0 credentials at Google Developers Console._**
+_**Step I: Obtain OAuth 2.0 credentials at Google Developers Console.**_
 As stated here, you should:
+
 1. Go to the Google Developers Console.
 2. Select a project, or create a new one.
 3. In the sidebar on the left, expand APIs & auth. Next, click APIs. Select the Enabled APIs link in the API section to see a list of all your enabled APIs. Make sure that the “Gmail API” is on the list of enabled APIs. If you have not enabled it, select the Gmail API from the list of APIs (under Google Apps APIs), then select the Enable API button for the API.
 4. In the sidebar on the left, select Credentials.
 5. If you haven’t done so already, create your project’s OAuth 2.0 credentials by clicking Create new Client ID, and providing the information needed to create the credentials.
 
-![screenshot](../../../../images/nodemailer/image1.png?raw=true)
+![screenshot](/media/image11.png)
 
 6. Look for the Client ID and Client secret in the table associated with each of your credentials.
 
-![screenshot](../../../../images/nodemailer/image2.png?raw=true)
+![screenshot](/media/image12.png)
 
 PAY SPECIAL ATTENTION TO specifying https://developers.google.com/oauthplayground as a Redirect URI when you create a new User in the console. Otherwise, you will have an error.
-**_Step II: Obtain the refresh token at Google OAuth2.0 Playground_**
+_**Step II: Obtain the refresh token at Google OAuth2.0 Playground**_
+
 1. Go to the Google Oauth2.0 Playground.
 2. Click the Gear Button on the right-top. Set your Client ID and Client Secret obtained from theGoogle Developers Console, and select Access token location as Authorization header w/ Bearer prefix. Close this configuration overlay.
 
-![screenshot](../../../../images/nodemailer/image3.png?raw=true)
+![screenshot](/media/image13.png)
 
 3. Set up the scopes. Use https://mail.google.com/ as it’s the one need by nodemailer. Then click the Authorize APIs button.
 
-![screenshot](../../../../images/nodemailer/image4.png?raw=true)
+![screenshot](/media/image14.png)
 
 4. After OAuth2.0 authorization, exchange authorization code for tokens and your refresh token is ready-to-use.
 
-![screenshot](../../../../images/nodemailer/image5.png?raw=true)
+![screenshot](/media/image15.png)
 
 and setup your configuration here:
 
@@ -199,5 +205,5 @@ Feel free to clone the full code for this post to see the full picture of how ev
 [source code on github](https://github.com/pandeysoni/Nodemailer-Service-in-Node.js-using-SMTP-and-xoauth2) 
 You can reach out to me for any doubt and suggestions. Please share this with others as well.
 
-Thanks!  
+Thanks!\
 Happy Coding!!
