@@ -11,7 +11,7 @@ tags:
   - Node.js
   - Express
 ---
-![screenshot](/media/image1.jpg)
+![screenshot](/media/image2.jpg)
 
 Hello Guys!
 I have received very good response from my previous articles, which encourages me to write more about technology stuff. This time, I too have something interesting to share with you. Now a days, I am working on AWS services (API Gateway, Lambda Function, DynamoDb, S3 etc.). In this story, I will explain How to upload files to AWS server (S3).
