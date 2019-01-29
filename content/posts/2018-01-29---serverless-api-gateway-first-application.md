@@ -9,7 +9,7 @@ tags:
   - "Serverless"
   - "Node.js"
   - "API Gateway"
-description: API Gateway First Application using Serverless Framework
+description: Here we will learn how to implement api-gateway. In last post, we just go through with the basics of..
 ---
 
 Here we will learn how to implement api-gateway. In last post, we just go through with the basics of [Serverless | Lambda Functions | API Gateway](https://thepandeysoni.org/2017/11/05/serverless-lambda-functions-api-gateway/). 

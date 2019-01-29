@@ -4,7 +4,8 @@ title: Upload files to AWS S3 in Node.js
 slug: /2017/08/05/upload-files-to-aws-s3-in-node.js/
 draft: false
 date: '2017-08-05T22:40:32.169Z'
-description: Upload files to AWS S3 in Node.js.
+description: Hello Guys!
+I have received very good response from my previous articles, which encourages me to write more about technology stuff...
 category: Javascript
 tags:
   - Nodemailer

@@ -4,7 +4,7 @@ title: Serverless | Lambda Functions | API Gateway
 slug: /2017/11/05/serverless-lambda-functions-api-gateway/
 draft: false
 date: '2017-11-05T22:40:32.169Z'
-description: Serverless | Lambda Functions | API Gateway
+description: Now a days, I am working on AWS services (API Gateway, Lambda Function, Kinesis Stream, DynamoDb, S3 etc.). In this article, I will explain How to do Serverless Programming...
 category: Javascript
 tags:
   - Serverless

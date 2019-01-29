@@ -9,7 +9,7 @@ tags:
   - "Node.js"
   - "Angular.js"
   - "CRUD"
-description: "CRUD Operation (Node.js + Express + MongoDB) with UI integration (Angular.js)."
+description: In this article, we will develop FrontEnd using Angular.js. Before that we will reorganize our structure...
 ---
 
 In previous post [CRUD Operations in Node.js Application (Expresss Framework) using mongodb](http://thepandeysoni.org/2016/03/05/CRUD-operations-in-node.js-application-(expresss=framework)-using-mongodb/). In this article, we will develop FrontEnd using Angular.js. Before that we will reorganize our structure.

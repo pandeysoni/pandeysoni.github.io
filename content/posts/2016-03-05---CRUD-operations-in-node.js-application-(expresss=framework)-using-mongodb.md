@@ -10,7 +10,7 @@ tags:
   - "CRUD"
   - "Express"
   - "Mongodb"
-description: "CRUD Operations in Node.js Application (Express Framework) using mongodb."
+description: I assume, that you have [node.js](http://nodejs.org) already installed. We will create a basic structure using the express generator...
 ---
 I assume, that you have [node.js](http://nodejs.org) already installed. We will create a basic structure using the express generator. First, you need to install express and express-generator.
 

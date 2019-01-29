@@ -9,7 +9,7 @@ tags:
   - "JWT"
   - "Node.js"
   - "Express"
-description: "User Authentication using JWT (JSON Web Token) in Node.js (Express Framework)."
+description: Here we will learn how to implement user authentication using JWT(JSON Web Token) strategy...
 ---
 
 Here we will learn how to implement user authentication using JWT(JSON Web Token) strategy. What we are going to use here:

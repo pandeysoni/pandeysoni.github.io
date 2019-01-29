@@ -9,7 +9,7 @@ tags:
   - "Passport.js"
   - "Node.js"
   - "Express"
-description: "User authentication using passport.js in Node.js."
+description: Here we will learn how to implement user authentication using passport-local strategy...
 ---
 
 Here we will learn how to implement user authentication using passport-local strategy. In last post, we learned [User Authentication using JWT](http://thepandeysoni.org/2016/05/22/user-authentication-using-JWT-(JSON-Web-Token)-in-Node.js-(express=framework)/). There, we used JSON Web Token. These both are different way and robust way.
