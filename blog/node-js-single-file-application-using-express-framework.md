@@ -1,5 +1,5 @@
 ---
-path: 2016/05/02/node.js-single-file-application-using-express-framework
+path: /node.js-single-file-application-using-express-framework
 date: 2016-05-02T16:25:47.068Z
 title: Node.js Single File Application using Express Framework
 ---
