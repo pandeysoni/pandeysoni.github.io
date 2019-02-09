@@ -1,7 +1,7 @@
 ---
 template: post
 title: 'Amazon Cognito for Web based Authentication  '
-slug: /02/09/2019/amazon-cognito-custom-auth-for-web-based-app
+slug: /2019/02/09/amazon-cognito-custom-auth-for-web-based-app
 draft: true
 date: 2019-02-09T09:43:32.340Z
 description: Amazon Cognito for Web based Authentication
