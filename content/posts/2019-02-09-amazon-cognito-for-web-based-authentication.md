@@ -18,7 +18,7 @@ Let's first walk through, how to setup Amazon Cognito -
 
 1. Login to AWS and go to the Cognito Service section.
 2. Select Manage User Pool for this setup and you will have option to Create User Pool.
-3. Provide unique pool name and there you will have two option _**Review defaults**_ or _**Step through Settings**_, I have chosen _**Step through Settings**_ and for **Attributes **I have chosen Email to login, keep remaining configuration as default.
+3. Provide unique pool name and there you will have two option _**Review defaults**_ or _**Step through Settings**_, I have chosen _**Step through Settings**_ and for **_Attributes_** I have chosen Email to login, keep remaining configuration as default.
 
 ![](/media/screen-shot-2019-02-09-at-4.29.34-pm.png)
 
@@ -26,7 +26,7 @@ Let's first walk through, how to setup Amazon Cognito -
 
 ![](/media/screen-shot-2019-02-09-at-4.10.42-pm.png)
 
-6. Select **App Clients **from Sidebar and give app client name, after this it will give you App clientId and App client secret.
+6. Select **_App Clients_** from Sidebar and give app client name, after this it will give you App clientId and App client secret.
 7. Select **_App Client Settings_** from Sidebar and fill the details as shown in image, in Callback URL provide a URL name where you want to be redirected after the login. 
 
 ![](/media/screen-shot-2019-02-09-at-4.17.32-pm.png)
