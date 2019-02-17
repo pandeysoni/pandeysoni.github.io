@@ -1,17 +1,22 @@
 ---
-title: " User Authentication using JWT (JSON Web Token) in Node.js (Express Framework)"
-date: "2016-05-22T22:12:03.284Z"
-template: "post"
+template: post
+title: ' User Authentication using JWT (JSON Web Token) in Node.js (Express Framework)'
+slug: >-
+  2016/05/22/user-authentication-using-JWT-(JSON-Web-Token)-in-Node.js-(express=framework)
 draft: false
-slug: "2016/05/22/user-authentication-using-JWT-(JSON-Web-Token)-in-Node.js-(express=framework)"
-category: "Javascript"
+date: '2016-05-22T22:12:03.284Z'
+description: >-
+  A JSON Web Token, or JWT, is used to send information that can be verified and
+  trusted by means of a digital signature. It comprises a compact and URL-safe
+  JSON object, which is cryptographically signed to verify its authenticity, and
+  which can also be encrypted if the payload contains sensitive information.
+  Because of it’s compact structure ...
+category: Javascript
 tags:
-  - "JWT"
-  - "Node.js"
-  - "Express"
-description: Here we will learn how to implement user authentication using JWT(JSON Web Token) strategy...
+  - JWT
+  - Node.js
+  - Express
 ---
-
 Here we will learn how to implement user authentication using JWT(JSON Web Token) strategy. What we are going to use here:
 
 * Node.js
@@ -22,20 +27,21 @@ Here we will learn how to implement user authentication using JWT(JSON Web Token
 I assume, you all are aware with Node.js, Express Framework and Mongodb. If not, please have a look on my previous posts:
 
 1. [Node.js Single File Application using Express Framework.](http://thepandeysoni.org/2016/02/05/node.js-single-file-application-using-express-framework/)
-1. [CRUD Operations in Node.js Application (Expresss Framework) using mongodb.](http://thepandeysoni.org/2016/04/05/CRUD-operations-in-node.js-application-(expresss=framework)-using-mongodb/)
+2. [CRUD Operations in Node.js Application (Expresss Framework) using mongodb.](http://thepandeysoni.org/2016/04/05/CRUD-operations-in-node.js-application-(expresss=framework)-using-mongodb/)
 
 These articles will atleast give you an overview about it.
 
-What is **_JWT (JSON Web Token)_**?
+**What is** _**JWT (JSON Web Token)**_?
 A JSON Web Token, or JWT, is used to send information that can be verified and trusted by means of a digital signature. It comprises a compact and URL-safe JSON object, which is cryptographically signed to verify its authenticity, and which can also be encrypted if the payload contains sensitive information. Because of it’s compact structure, JWT is usually used in HTTP Authorization headers or URL query parameters.
 Here we will learn how to implement token based user authentication.
+
 1. Register new user. 
 2. One email address can be registered only once.
 3. After registration a verification link is send to user’s email address.
 4. Verify account by clicking on link send to user’semail address and on successful verification user will be redirected to login page.
 5. If you are not verified your account after creation, you will not be allowed to land to dashboard after success login.
-7. User can resend password to registered email address in case user forget.
-Project Structure will be like this:
+6. User can resend password to registered email address in case user forget.
+   Project Structure will be like this:
 
 ```js
 + server
@@ -51,6 +57,7 @@ Project Structure will be like this:
 + package.json
 + README.md
 ```
+
 You can also have a look to complete [MEAN Structure](http://thepandeysoni.org/2016/05/07/CRUD-Operation-with-UI-integration-(Angular.js)/).
 
 **1. Setting up Server using Express Framework**
@@ -81,11 +88,15 @@ app.listen(process.env.PORT || port);
 
 console.log('App started on port ' + port);
 ```
+
 First of all, we required all the module dependencies. After that we used middleware instances body-parser, cookie-parser and express-session. We used Mongodb to store database. You can see we loaded db file, so our connection will established, when we will start our server.
+
 ```js
 const db = require(‘./server/config/db’)
 ```
+
 **2. Setting up Database connection using Mongoose**
+
 ```js
 const Mongoose = require('mongoose');
 const config = require('./config');
@@ -100,11 +111,14 @@ db.once('open', function callback() {
 
 exports.db = db;
 ```
+
 **3. Setting up JWT**
+
 ```js
 npm install --save jsonwebtoken
 ```
-**_Register new user_**: We will check that enetered email id is unique or not. If email unique then we will save entry and send verification link using nodemailer.
+
+_**Register new user**_: We will check that enetered email id is unique or not. If email unique then we will save entry and send verification link using nodemailer.
 
 ```js
 exports.create = function (req, res){
@@ -127,7 +141,8 @@ exports.create = function (req, res){
   })
 }
 ```
-saveUser function is defined in model as a [statics function]() and We used ‘aes-256-ctr’ algorithm to encrypt and decrypt password.
+
+saveUser function is defined in model as a [statics function](<>) and We used ‘aes-256-ctr’ algorithm to encrypt and decrypt password.
 
 ```js
 var  algorithm = 'aes-256-ctr';
@@ -148,8 +163,10 @@ function encrypt(password) {
     return crypted;
 }
 ```
-**_Verify New User_**: When new user register, that user need to verify link, otherwise user will not able to login.  
-**_Login User_**:
+
+_**Verify New User**_: When new user register, that user need to verify link, otherwise user will not able to login.\
+_**Login User**_:
+
 ```js
 exports.login = function (req, res){
   User.findUser(req.body.username, function(err, user) {
@@ -190,8 +207,9 @@ exports.login = function (req, res){
     })
 }
 ```
-Initially, we find user in our database, once user found in database, we decrypted entered password and matched with found user’s password and after successful match, we generate one token.  
-**_Forgot Password_**: In this case, we are using one package randomstring. install **_randomstring_** package:
+
+Initially, we find user in our database, once user found in database, we decrypted entered password and matched with found user’s password and after successful match, we generate one token.\
+_**Forgot Password**_: In this case, we are using one package randomstring. install _**randomstring**_ package:
 
 ```js
 npm install -- save randomstring
@@ -216,11 +234,12 @@ exports.forgotPassword = function (req, res){
     })
 }
 ```
+
 Here, we are generating random password and updating that password, so that user can login with the random generated password.
 
 Feel free to clone the full code for this post to see the full picture of how everything works together and customize it for your own needs. Have a look to repository for complete working code.
 [source code on github](https://github.com/pandeysoni/User-Authentication-using-JWT-JSON-Web-Token-in-Node.js-Express) 
 You can reach out to me for any doubt and suggestions. Please share this with others as well.
 
-Thanks!  
+Thanks!\
 Happy Coding!!

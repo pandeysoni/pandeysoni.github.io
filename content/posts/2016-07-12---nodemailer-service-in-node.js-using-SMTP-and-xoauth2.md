@@ -2,9 +2,14 @@
 template: post
 title: Nodemailer Service in Node.js using SMTP and xoauth2
 slug: /2016/07/12/user-authentication-using-passport.js-in-node.js/
-draft: false
+draft: true
 date: '2016-07-12T22:40:32.169Z'
-description: Here, we will learn how to send a mail in Node.js using Nodemailer Package. What we are planning to use here...
+description: >-
+  Here, we will learn how to send a mail in Node.js using Nodemailer Package.
+  What we are planning to use here. we will create one application which will do
+  following things only: Nodemailer setup using SMTP (here you will use username
+  and password). Nodemailer setup using xoauth2 (here you will need user,
+  clientId, clientSecret, refreshToken, accessToken)....
 category: Javascript
 tags:
   - Nodemailer

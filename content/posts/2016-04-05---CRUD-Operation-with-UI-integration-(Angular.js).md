@@ -1,15 +1,21 @@
 ---
-title: "CRUD Operation (Node.js + Express + MongoDB) with UI integration (Angular.js)"
-date: "2016-04-05T22:40:32.169Z"
-template: "post"
+template: post
+title: CRUD Operation (Node.js + Express + MongoDB) with UI integration (Angular.js)
+slug: /2016/04/05/CRUD-Operation-with-UI-integration-(Angular.js)
 draft: false
-slug: "/2016/04/05/CRUD-Operation-with-UI-integration-(Angular.js)"
-category: "Javascript"
+date: '2016-04-05T22:40:32.169Z'
+description: >-
+  In this article, we will develop FrontEnd using Angular.js. Before that we
+  will reorganize our structure. There will be some changes in server code like
+  we need to load frontend directory in server side etc. Have a look at
+  repository for new changes in server code. Before going to start development
+  in Angular.js, first have a look to ui-router. Let's start FrontEnd Side code
+  ...
+category: Javascript
 tags:
-  - "Node.js"
-  - "Angular.js"
-  - "CRUD"
-description: In this article, we will develop FrontEnd using Angular.js. Before that we will reorganize our structure...
+  - Node.js
+  - Angular.js
+  - CRUD
 ---
 
 In previous post [CRUD Operations in Node.js Application (Expresss Framework) using mongodb](http://thepandeysoni.org/2016/03/05/CRUD-operations-in-node.js-application-(expresss=framework)-using-mongodb/). In this article, we will develop FrontEnd using Angular.js. Before that we will reorganize our structure.

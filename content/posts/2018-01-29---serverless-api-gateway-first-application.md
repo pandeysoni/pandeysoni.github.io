@@ -1,15 +1,18 @@
 ---
+template: post
 title: API Gateway First Application | Serverless
-date: "2018-01-29T22:40:32.169Z"
-template: "post"
+slug: /2018/01/29/serverless-api-gateway-first-application/
 draft: false
-slug: "/2018/01/29/serverless-api-gateway-first-application/"
-category: "Javascript"
+date: '2018-01-29T22:40:32.169Z'
+description: >-
+  Here we will learn how to implement api-gateway. In last post, we just go
+  through with the basics of Serverless, Lambda Functions and  API Gateway. What
+  we are going to use here ...
+category: Javascript
 tags:
-  - "Serverless"
-  - "Node.js"
-  - "API Gateway"
-description: Here we will learn how to implement api-gateway. In last post, we just go through with the basics of..
+  - Serverless
+  - Node.js
+  - API Gateway
 ---
 
 Here we will learn how to implement api-gateway. In last post, we just go through with the basics of [Serverless | Lambda Functions | API Gateway](https://thepandeysoni.org/2017/11/05/serverless-lambda-functions-api-gateway/). 

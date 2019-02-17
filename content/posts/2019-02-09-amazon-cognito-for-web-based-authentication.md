@@ -4,7 +4,11 @@ title: 'Amazon Cognito for Web based Authentication  '
 slug: /2019/02/09/amazon-cognito-custom-auth-for-web-based-app
 draft: false
 date: 2019-02-09T09:43:32.340Z
-description: Amazon Cognito for Web based Authentication
+description: >-
+  Amazon Cognito is complete package of authentication, authorization, and user
+  management for web and mobile apps. It's easy for users to sign in directly
+  with a user name and password, or through a third party such as Facebook,
+  Amazon, or Google ...
 category: AWS Services
 tags:
   - Amazon Cognito
