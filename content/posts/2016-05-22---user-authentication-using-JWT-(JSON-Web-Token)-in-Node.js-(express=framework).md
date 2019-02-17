@@ -1,15 +1,21 @@
 ---
-title: " User Authentication using JWT (JSON Web Token) in Node.js (Express Framework)"
-date: "2016-05-22T22:12:03.284Z"
-template: "post"
+template: post
+title: ' User Authentication using JWT (JSON Web Token) in Node.js (Express Framework)'
+slug: >-
+  2016/05/22/user-authentication-using-JWT-(JSON-Web-Token)-in-Node.js-(express=framework)
 draft: false
-slug: "2016/05/22/user-authentication-using-JWT-(JSON-Web-Token)-in-Node.js-(express=framework)"
-category: "Javascript"
+date: '2016-05-22T22:12:03.284Z'
+description: >-
+  A JSON Web Token, or JWT, is used to send information that can be verified and
+  trusted by means of a digital signature. It comprises a compact and URL-safe
+  JSON object, which is cryptographically signed to verify its authenticity, and
+  which can also be encrypted if the payload contains sensitive information.
+  Because of it’s compact structure ...
+category: Javascript
 tags:
-  - "JWT"
-  - "Node.js"
-  - "Express"
-description: Here we will learn how to implement user authentication using JWT(JSON Web Token) strategy...
+  - JWT
+  - Node.js
+  - Express
 ---
 
 Here we will learn how to implement user authentication using JWT(JSON Web Token) strategy. What we are going to use here:
