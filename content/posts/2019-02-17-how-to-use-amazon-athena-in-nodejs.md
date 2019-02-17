@@ -19,15 +19,11 @@ Amazon Athena provides a platform which we can use for Standard SQL query and it
 
 ## **Why should we use Athena?**
 
-Athena is serverless and there is no infrastructure for setup and manage.
-
-Pay only for queries we do run.
-
-Queries are faster even with large dataset.
-
-Parallel query makes system more faster.
-
-Drop NoSql db to S3 and use Amazon Athena to analyze data directly from S3.
+* Athena is serverless and there is no infrastructure for setup and manage.
+* Pay only for queries we do run.
+* Queries are faster even with large dataset.
+* Parallel query makes system more faster.
+* Drop NoSql db to S3 and use Amazon Athena to analyze data directly from S3.
 
 ## **Steps to use Amazon Athena -**
 
