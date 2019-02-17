@@ -48,7 +48,26 @@ i) Make sure that testdatabase is selected for DATABASE and then choose New Quer
 ii) In the query pane, enter the following CREATE TABLE statement, and then choose Run Query:
 
 ```
-CREATE EXTERNAL TABLE IF NOT EXISTS test_table(`Date` DATE, Time STRING, Location STRING, Bytes INT, RequestIP STRING, Method STRING, Host STRING, Uri STRING, Status INT, Referrer STRING, os STRING, Browser STRING,BrowserVersion STRING) ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.RegexSerDe'WITH SERDEPROPERTIES ("input.regex" = "^(?!#)([^ ]+)\\s+([^ ]+)\\s+([^ ]+)\\s+([^ ]+)\\s+([^ ]+)\\s+([^ ]+)\\s+([^ ]+)\\s+([^ ]+)\\s+([^ ]+)\\s+([^ ]+)\\s+[^\(]+[\(]([^\;]+).*\%20([^\/]+)[\/](.*)$") LOCATION 's3://athena-examples-myregion/cloudfront/plaintext/';
+CREATE EXTERNAL TABLE IF NOT EXISTS test_table(
+`Date` DATE,
+ Time STRING,
+ Location STRING,
+ Bytes INT,
+ RequestIP STRING,
+ Method STRING,
+ Host STRING,
+ Uri STRING,
+ Status INT,
+ Referrer STRING,
+ os STRING,
+ Browser STRING,
+BrowserVersion STRING
+) ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.RegexSerDe'
+WITH SERDEPROPERTIES (
+"input.regex" = "^(?!#)([^ ]+)\\s+([^ ]+)\\s+([^ ]+)\\s+([^ ]+)\\s+([^
+ ]+)\\s+([^ ]+)\\s+([^ ]+)\\s+([^ ]+)\\s+([^ ]+)\\s+([^ ]+)\\s+[^\(]+[\(]
+([^\;]+).*\%20([^\/]+)[\/](.*)$") LOCATION 's3://athena-examples-
+myregion/cloudfront/plaintext/';
 ```
 
 Change Location path of S3, where you are keeping your data.
@@ -57,26 +76,79 @@ Change Location path of S3, where you are keeping your data.
 
 **i) Create Query Execution Id**
 
+```js
+function createQueryExecutionId(){
+/** doing resultConfiguration, but we will not save query result there. */
+   const params = {
+     QueryString: 'Select * From test-table', /* required */
+     ResultConfiguration: { /* required */
+     OutputLocation: `s3://bucket-name/`, 
+    /* required s3 output location path*/
+    EncryptionConfiguration: {
+      EncryptionOption: 'SSE_S3', /* required */
+    }
+  }
+};
+
+athena.startQueryExecution(params, (err, data) => {
+   console.log(err, data);
+});
+}
 ```
-function createQueryExecutionId(){  /**doing resultConfiguration, but we will not save query result there. */      const params = {   QueryString: 'Select * From test-table', /* required */   ResultConfiguration: { /* required */   OutputLocation: `s3://bucket-name/`, /* required s3 output location path    */   EncryptionConfiguration: {     EncryptionOption: 'SSE_S3', /* required */   }}};athena.startQueryExecution(params, (err, data) => {   console.log(err, data);});}
-```
+
+
 
 **ii) Check status of Created Query Execution Id in last step.**
 
 ```
-function checkQueryCreateStatus(){   const params = {      QueryExecutionId: this.QueryExecutionId       /* required generated in last step*/   };   athena.getQueryExecution(params, (err, data) => {     if (err) console.log(err, err.stack); // an error occurred     else{        if(data && data.QueryExecution && data.QueryExecution.Status && data.QueryExecution.Status.State && data.QueryExecution.Status.State === 'RUNNING'){   console.log("Athena Query status is running");}        else{          console.log("Atehna Query status is Active")        }     }   });}
+function checkQueryCreateStatus(){
+   const params = {
+      QueryExecutionId: this.QueryExecutionId 
+      /* required generated in last step*/
+   };
+   athena.getQueryExecution(params, (err, data) => {
+     if (err) {
+      console.log(err, err.stack); // an error occurred
+     }
+     else{
+        if(data && data.QueryExecution && data.QueryExecution.Status &&
+ data.QueryExecution.Status.State && data.QueryExecution.Status.State === 
+'RUNNING'){
+             console.log("Athena Query status is running");
+          }
+          else{
+            console.log("Atehna Query status is Active");
+          }
+     }
+   });
+}
 ```
 
 **iii) Get Query Result, when Athena Query status is Active.**
 
 ```
-function getQueryResultByExecutionId(queryExecutionId){   const params = {     QueryExecutionId: queryExecutionId     /* queryExecutionId created in first step*/   };    athena.getQueryResults(params, (err, data) => {       console.log(err?err.stack:err, data)     });}
+function getQueryResultByExecutionId(queryExecutionId){
+    const params = {
+      QueryExecutionId: queryExecutionId
+      /*queryExecutionId created in first step.*/
+    };
+    athena.getQueryResults(params, (err, data) => {
+       console.log(err?err.stack:err, data);
+     });
+}
 ```
 
 **iv) Stop Athena Query Execution Id**
 
 ```
-function stopQueryExecutionId(queryExecutionId){    const params = {       QueryExecutionId: queryExecutionId    };    athena.stopQueryExecution(params, (err, data) => {      console.log(err?err.stack:err, data)     });}
+function stopQueryExecutionId(queryExecutionId){
+    const params = {
+       QueryExecutionId: queryExecutionId
+    };
+    athena.stopQueryExecution(params, (err, data) => {
+      console.log(err?err.stack:err, data);
+    });
+}
 ```
 
 Feel free to download the full code for this post to see the full picture of how everything works together and customize it for your own needs. Have a look to repository for complete working code.
