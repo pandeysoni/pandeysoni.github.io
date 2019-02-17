@@ -17,6 +17,8 @@ tags:
 
 Amazon Athena provides a platform which we can use for Standard SQL query and it uses Amazon Simple Storage (S3) for data storage.
 
+![](/media/screen-shot-2019-02-17-at-10.16.58-pm.png)
+
 ## **Why should we use Athena?**
 
 * Athena is serverless and there is no infrastructure for setup and manage.
