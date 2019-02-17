@@ -4,7 +4,10 @@ title: Upload files to AWS S3 in Node.js
 slug: /2017/08/05/upload-files-to-aws-s3-in-node.js/
 draft: false
 date: '2017-08-05T22:40:32.169Z'
-description: Hello Guys! I have received very good response from my previous articles, which encourages me to write more about technology stuff...
+description: >-
+  Now a days, I am working on AWS services (API Gateway, Lambda Function,
+  DynamoDb, S3 etc.). In this story, I will explain How to upload files to AWS
+  server (S3). What we are going to use here ...
 category: Javascript
 tags:
   - Nodemailer
@@ -13,8 +16,7 @@ tags:
 ---
 ![screenshot](/media/image2.jpg)
 
-Hello Guys!
-I have received very good response from my previous articles, which encourages me to write more about technology stuff. This time, I too have something interesting to share with you. Now a days, I am working on AWS services (API Gateway, Lambda Function, DynamoDb, S3 etc.). In this story, I will explain How to upload files to AWS server (S3).
+Now a days, I am working on AWS services (API Gateway, Lambda Function, DynamoDb, S3 etc.). In this story, I will explain How to upload files to AWS server (S3).
 What we are going to use here:
 
 * Node.js
@@ -28,7 +30,7 @@ I assume, you all are aware with Node.js, Express Framework and Mongodb. If not,
 
 These articles will atleast give you an overview about it.
 
-_**What is Nodemailer Package?**_
+**_What is Nodemailer Package?_**
 Send e-mails with Node.JS — easy as cake! [Nodemailer](http://nodemailer.com/)
 Copyright © Nodemailer
 Here, we will create application which will do following things only:
@@ -159,9 +161,9 @@ const bucketName = "pandeysoni"
 ```
 
 **NOTE:**
-_**Bucket name must not contain uppercase characters.**_\
-_**Bucket name must start with a lowercase letter or number.**_\
-_**Bucket name must be between 3 and 63 characters long.**_\
+**_Bucket name must not contain uppercase characters._**\
+**_Bucket name must start with a lowercase letter or number._**\
+**_Bucket name must be between 3 and 63 characters long._**\
 **createMainBucket Function:**\
 S3.headBucket: check if bucket already exists or not. If bucket does not exist, then we will go to error part and create bucket with the defined name of bucket in bucketName. if bucket already exists, then this function will not create any bucket.\
 **createItemObject Function:**\
