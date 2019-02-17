@@ -2,7 +2,7 @@
 template: post
 title: How to use Amazon Athena in Nodejs
 slug: /2019/02/17/how-to-user-amazon-athena-in-nodejs
-draft: true
+draft: false
 date: 2019-02-17T10:22:25.211Z
 description: >-
   Amazon Athena provides a platform which we can use for Standard SQL query and
