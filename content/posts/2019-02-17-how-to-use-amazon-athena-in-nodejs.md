@@ -35,7 +35,9 @@ i) Open the Athena console.
 
 ii) In the Athena Query Editor, you see a query pane with an example query. Start typing your query anywhere in the query pane. To create a database named testdatabase, enter the following CREATE DATABASE statement, and then choose Run Query:
 
+```
 CREATE DATABASE testdatabase
+```
 
 **Step 2: Create a Table**
 
