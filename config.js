@@ -17,8 +17,9 @@ module.exports = {
     name: 'Soni Pandey',
     photo: '/photo.jpg',
     contacts: {
-      twitter: '#',
-      github: '#'
+      twitter: 'sonipandey1',
+      github: 'pandeysoni',
+      linkedIn: 'pandeysoni'
     }
   }
 };

@@ -121,6 +121,7 @@ In applicationModuleVendorDependencies, you can add more modules, according to y
     <!-- META -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+    
     <base href="/">
     <title>NodeApp</title>
     <!-- SCROLLS -->
@@ -133,6 +134,13 @@ In applicationModuleVendorDependencies, you can add more modules, according to y
         }
       </style>
         <link rel="stylesheet" href="bower_components/angular-growl/build/angular-growl.min.css">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2251694698927519",
+    enable_page_level_ads: true
+  });
+</script>
     <!-- SPELLS -->
 </head>
 <!-- SET THE CONTROLLER AND GET ALL TODOS -->

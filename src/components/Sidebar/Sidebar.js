@@ -43,6 +43,7 @@ export const Sidebar = (props) => (
               contacts {       
                 twitter
                 github
+                linkedIn
               }
             }
           }
