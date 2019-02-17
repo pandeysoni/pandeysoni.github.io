@@ -6,7 +6,7 @@ module.exports = {
   subtitle: '',
   copyright: '© All rights reserved.',
   disqusShortname: '',
-  postsPerPage: 4,
+  postsPerPage: 10,
   menu: [
     {
       label: 'Articles',
