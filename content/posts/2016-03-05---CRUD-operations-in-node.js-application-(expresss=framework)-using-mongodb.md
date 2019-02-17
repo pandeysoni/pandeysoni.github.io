@@ -1,16 +1,21 @@
 ---
+template: post
 title: CRUD Operations in Node.js Application (Express Framework) using mongodb
-date: "2016-03-05T22:40:32.169Z"
-template: "post"
+slug: >-
+  /2016/03/05/CRUD-operations-in-node.js-application-(expresss=framework)-using-mongodb
 draft: false
-slug: "/2016/03/05/CRUD-operations-in-node.js-application-(expresss=framework)-using-mongodb"
-category: "Javascript"
+date: '2016-03-05T22:40:32.169Z'
+description: >-
+  I assume, that you have [node.js](http://nodejs.org) already installed. We
+  will create a basic structure using the express generator. Great. Now we've
+  got Express & the generator installed as a global command on our system. Use
+  below command to create express basic structure ...
+category: Javascript
 tags:
-  - "Node.js"
-  - "CRUD"
-  - "Express"
-  - "Mongodb"
-description: I assume, that you have [node.js](http://nodejs.org) already installed. We will create a basic structure using the express generator...
+  - Node.js
+  - CRUD
+  - Express
+  - Mongodb
 ---
 I assume, that you have [node.js](http://nodejs.org) already installed. We will create a basic structure using the express generator. First, you need to install express and express-generator.
 
