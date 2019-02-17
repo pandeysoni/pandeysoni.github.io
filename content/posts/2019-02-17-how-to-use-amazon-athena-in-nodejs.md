@@ -6,7 +6,8 @@ draft: false
 date: 2019-02-17T10:22:25.211Z
 description: >-
   Amazon Athena provides a platform which we can use for Standard SQL query and
-  it uses Amazon Simple Storage (S3) for data storage...
+  it uses Amazon Simple Storage (S3) for data storage. Athena is serverless and
+  there is no infrastructure for setup and manage...
 category: AWS Services
 tags:
   - Amazon Athena
