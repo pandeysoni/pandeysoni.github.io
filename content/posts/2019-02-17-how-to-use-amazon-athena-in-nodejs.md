@@ -1,6 +1,6 @@
 ---
 template: post
-title: How to use Amazon Athena in Nodejs
+title: How to use Amazon Athena in Nodejs?
 slug: /2019/02/17/how-to-user-amazon-athena-in-nodejs
 draft: false
 date: 2019-02-17T10:22:25.211Z
