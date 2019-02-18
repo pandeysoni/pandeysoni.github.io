@@ -1,7 +1,7 @@
 ---
 template: page
-title: About
-slug: /about
+title: Contact Us
+slug: /contact
 draft: false
 ---
-I am a Software Developer and love programming. I love blogging and like to share my solutions to network, which might be helpful to others.
+Please reach to me at sonipandey.71@gmail.com.
