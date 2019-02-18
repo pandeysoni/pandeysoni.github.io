@@ -6,11 +6,10 @@ slug: >-
 draft: false
 date: '2016-05-22T22:12:03.284Z'
 description: >-
-  A JSON Web Token, or JWT, is used to send information that can be verified and
-  trusted by means of a digital signature. It comprises a compact and URL-safe
-  JSON object, which is cryptographically signed to verify its authenticity, and
-  which can also be encrypted if the payload contains sensitive information.
-  Because of it’s compact structure ...
+  Here we will learn how to implement user authentication using JWT(JSON Web
+  Token) strategy. What we are going to use here: Node.js, Express Framework,
+  Mongodb and JWT. I assume, you all are aware with Node.js, Express Framework
+  and Mongodb. If not, please have a look on my previous posts: ...
 category: Javascript
 tags:
   - JWT
@@ -31,8 +30,6 @@ I assume, you all are aware with Node.js, Express Framework and Mongodb. If not,
 
 These articles will atleast give you an overview about it.
 
-**What is** _**JWT (JSON Web Token)**_?
-A JSON Web Token, or JWT, is used to send information that can be verified and trusted by means of a digital signature. It comprises a compact and URL-safe JSON object, which is cryptographically signed to verify its authenticity, and which can also be encrypted if the payload contains sensitive information. Because of it’s compact structure, JWT is usually used in HTTP Authorization headers or URL query parameters.
 Here we will learn how to implement token based user authentication.
 
 1. Register new user. 
