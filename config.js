@@ -13,12 +13,16 @@ module.exports = {
       path: '/'
     },
     {
-      label: 'About Us',
+      label: 'About',
       path: '/about'
     }, 
     {
-      label: 'Contact Us',
+      label: 'Contact',
       path: '/contact'
+    },
+    {
+      label: 'Privacy Policy',
+      path: '/privacy'
     }
   ],
   author: {
