@@ -29,7 +29,7 @@ I assume, you all are aware with Node.js, Express Framework and Mongodb. If not,
 
 These articles will atleast give you an overview about it.
 
-_**What is Nodemailer Package?**_
+**_What is Nodemailer Package?_**
 Send e-mails with Node.JS — easy as cake! [Nodemailer](http://nodemailer.com/)
 Copyright © Nodemailer
 Here, we will create application which will do following things only:
@@ -50,7 +50,7 @@ Here, we will create application which will do following things only:
 
 Here, we don’t save data in database, so we are not using any database. You can also have a look to complete [MEAN Structure](http://thepandeysoni.org/2016/04/05/CRUD-Operation-with-UI-integration-(Angular.js)/).
 
-_**1. Setting up Server using Express Framework.**_
+**_1. Setting up Server using Express Framework._**
 
 ```js
 /**
@@ -75,9 +75,9 @@ app.listen(port);
 console.log('Express app started on port ' + port);
 ```
 
-First of all, we required all the module dependencies. After that we used middleware instances _**body-parser**_, express.
+First of all, we required all the module dependencies. After that we used middleware instances **_body-parser_**, express.
 
-_**2. Setting up Nodemailer using SMTP**_
+**_2. Setting up Nodemailer using SMTP_**
 
 ```js
 const nodemailer = require('nodemailer')
@@ -141,7 +141,7 @@ We are parsing body data in mailOptions in this format:
 ```
 
 Transporter Object have one function named sendMail, which will send data using mailOptions. 
-_**3. Nodemailer setup using xoauth2.**_
+**_3. Nodemailer setup using xoauth2._**
 Here, transporter object will be change only
 
 ```js
@@ -162,7 +162,7 @@ var smtpTransport = nodemailer.createTransport("SMTP",{
 
 We need to install xoauth2 and need to setup clientId, clientSecret and refreshToken.
 
-_**Step I: Obtain OAuth 2.0 credentials at Google Developers Console.**_
+**_Step I: Obtain OAuth 2.0 credentials at Google Developers Console._**
 As stated here, you should:
 
 1. Go to the Google Developers Console.
@@ -171,23 +171,23 @@ As stated here, you should:
 4. In the sidebar on the left, select Credentials.
 5. If you haven’t done so already, create your project’s OAuth 2.0 credentials by clicking Create new Client ID, and providing the information needed to create the credentials.
 
-![screenshot](/media/image11.png)
+![screenshot](/media/screen-shot-2019-02-23-at-5.16.32-pm.png)
 
 6. Look for the Client ID and Client secret in the table associated with each of your credentials.
 
-![screenshot](/media/image12.png)
+![screenshot](/media/screen_shot_2019-02-23_at_5_20_40_pm.png)
 
 PAY SPECIAL ATTENTION TO specifying https://developers.google.com/oauthplayground as a Redirect URI when you create a new User in the console. Otherwise, you will have an error.
-_**Step II: Obtain the refresh token at Google OAuth2.0 Playground**_
+**_Step II: Obtain the refresh token at Google OAuth2.0 Playground_**
 
 1. Go to the Google Oauth2.0 Playground.
 2. Click the Gear Button on the right-top. Set your Client ID and Client Secret obtained from theGoogle Developers Console, and select Access token location as Authorization header w/ Bearer prefix. Close this configuration overlay.
 
-![screenshot](/media/image13.png)
+![screenshot](/media/screen_shot_2019-02-23_at_5_28_48_pm.png)
 
 3. Set up the scopes. Use https://mail.google.com/ as it’s the one need by nodemailer. Then click the Authorize APIs button.
 
-![screenshot](/media/image14.png)
+![screenshot](/media/screen_shot_2019-02-23_at_5_38_39_pm.png)
 
 4. After OAuth2.0 authorization, exchange authorization code for tokens and your refresh token is ready-to-use.
 
