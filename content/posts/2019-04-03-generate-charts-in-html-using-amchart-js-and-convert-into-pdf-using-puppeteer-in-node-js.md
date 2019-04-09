@@ -27,9 +27,9 @@ Here we'll learn about -
 
 ## 1. Amchart.js -
 
-[Amchart.js](https://www.amcharts.com/) is a complete package to generate charts and they have given option to customize more according to our need. We'll take example of serial chart and How we have used more options provided by Amchart.js. 
+[Amchart.js](https://www.amcharts.com/) is a complete package to generate charts and they have given option to customize more according to our need. We'll take example of serial chart and How we have used more options provided by Amchart.js.  
 
-_**Note - They have latest version 4, but we have used version 3 as already implemented in same version. **_
+_**Note - They have latest version 4, but we have used version 3 as already implemented in same version. Implementation can be different for other versions.**_
 
 **Serial Chart** - This is the basic example provided by Amchart.js for serial chart.
 
@@ -191,9 +191,9 @@ var uniqueUsersChart = AmCharts.makeChart("uniqueUsersChart", {
 		uniqueUsersChart.addListener("drawn", modifyAxis);
 ```
 
-## 2. Puppeteer -
+## 2. Puppeteer - 
 
-We have used puppeteer to generate above chart into pdf.  Let's take a look to index.js file which take html as an input and pdfConverter.js file which convert html file into pdf.
+We have used puppeteer_** version -"^1.6.2"**_ to generate above chart into pdf.  Let's take a look to index.js file which take html as an input and pdfConverter.js file which convert html file into pdf. Implementation can be different for other versions.
 
 **index.js**
 
