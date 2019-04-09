@@ -18,18 +18,19 @@ tags:
   - Amchart.js
   - Charts
 ---
-Recently I came across the popular site which is famous for Node.js blogging and they have written [Generating PDF from HTML with Node.js and Puppeteer](https://blog.risingstack.com/pdf-from-html-node-js-puppeteer/), this blog says about the challenges which a node.js developer come across during generating PDF. The same challenge We have also came across while started the generated pdf and chooses puppeteer 8 months ago. There was one more additional challenge, where we have to generate report with some analytic data, so the challenge was there to generate charts and setting up those charts to PDF in standard format. 
+Recently I came across the popular site which is famous for Node.js blogging and they have written [Generating PDF from HTML with Node.js and Puppeteer](https://blog.risingstack.com/pdf-from-html-node-js-puppeteer/), this blog says about the challenges which a node.js developer come across during generating PDF. The same challenges we also came across while started the generated pdf and chooses puppeteer 8 months ago. There was one more additional challenge, where we have to generate report with some analytic data, so the challenge was there to generate dynamic charts and setting up those charts to PDF in standard format. 
 
-Here we'll learn about - 
+In this article we are major focuses on 
 
 1. Amchart.js module to generate charts.
-2. Puppeteer library to generate PDF.
+2. Convert ejs to HTML file.
+3. Puppeteer library to generate PDF.
 
 ## 1. Amchart.js -
 
 [Amchart.js](https://www.amcharts.com/) is a complete package to generate charts and they have given option to customize more according to our need. We'll take example of serial chart and How we have used more options provided by Amchart.js.  
 
-_**Note - They have latest version 4, but we have used version 3 as already implemented in same version. Implementation can be different for other versions.**_
+**_Note - They have latest version 4, but we have used version 3 as already implemented in same version. Implementation can be different for other versions._**
 
 **Serial Chart** - This is the basic example provided by Amchart.js for serial chart.
 
@@ -191,9 +192,20 @@ var uniqueUsersChart = AmCharts.makeChart("uniqueUsersChart", {
 		uniqueUsersChart.addListener("drawn", modifyAxis);
 ```
 
-## 2. Puppeteer - 
+## 2. Generate Dynamic chart using ejs
 
-We have used puppeteer_** version -"^1.6.2"**_ to generate above chart into pdf.  Let's take a look to index.js file which take html as an input and pdfConverter.js file which convert html file into pdf. Implementation can be different for other versions.
+To generate dynamic charts we have used ejs template and putting the file into ejs and convert into html using below piece of code - 
+
+```js
+ const filePathName = path.resolve(__dirname, 'filename.ejs');
+ const htmlString = fs.readFileSync(filePathName).toString();
+ const template = ejs.compile(htmlString);
+ return template(mailData); //mailData which you want to put dynamically in ejs.
+```
+
+## 3. Puppeteer -
+
+We have used puppeteer**_ version -"^1.6.2"_** to generate above chart into pdf.  Let's take a look to index.js file which take html as an input and pdfConverter.js file which convert html file into pdf. Implementation can be different for other versions.
 
 **index.js**
 
@@ -246,4 +258,4 @@ async function convert_html_string_to_pdf(html_string) {
 exports.convert_html_string_to_pdf = convert_html_string_to_pdf;
 ```
 
-Here is the [source code](https://github.com/pandeysoni/Generating-Charts-in-PDF), where you'll be able to see index.html and index.pdf file.
+Here is the [source code](https://github.com/pandeysoni/Generating-Charts-in-PDF-in-node.js), where you'll be able to see index.html and index.pdf file.
