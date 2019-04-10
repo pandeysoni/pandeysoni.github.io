@@ -20,6 +20,8 @@ tags:
 ---
 Recently, I came across the popular site which is famous for Node.js blogging and they host a blog on [Generating PDF from HTML with Node.js and Puppeteer](https://blog.risingstack.com/pdf-from-html-node-js-puppeteer/). This blog talks about the challenges which a Node.js developer face during Pdf generation. We also faced the similar issue while generating pdf eight months ago and problem was solved using puppetter library. There was one more challenge, where we had to generate dynamic report with some analytic data. 
 
+![Dynamic chart in Pdf](/media/screen-shot-2019-04-10-at-7.25.01-am.png)
+
 In this article We'll cover below points -
 
 1. Amchart.js module to generate charts.
@@ -30,7 +32,7 @@ In this article We'll cover below points -
 
 [Amchart.js](https://www.amcharts.com/) is a complete package to generate charts and they have given option to customize more according to our need. We'll take example of serial chart and how we have used more options provided by Amchart.js.  
 
-_**Note - They have latest version 4, but we have used version 3 as we have already implemented in same version. Implementation can be different for other versions.**_
+**_Note - They have latest version 4, but we have used version 3 as we have already implemented in same version. Implementation can be different for other versions._**
 
 **Serial Chart** - This is the basic example provided by Amchart.js for serial chart.
 
@@ -218,7 +220,7 @@ return template(data); //data which you want to put dynamically in ejs like data
 
 ## 3. Puppeteer -
 
-We have used puppeteer_** version -"^1.6.2"**_ to generate above chart into pdf.  Let's take a look to index.js file which take html as an input and pdfConverter.js file which convert html file into pdf. Implementation can be different for other versions.
+We have used puppeteer**_ version -"^1.6.2"_** to generate above chart into pdf.  Let's take a look to index.js file which take html as an input and pdfConverter.js file which convert html file into pdf. Implementation can be different for other versions.
 
 **index.js**
 
