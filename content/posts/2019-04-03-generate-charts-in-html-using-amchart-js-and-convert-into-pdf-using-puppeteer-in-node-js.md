@@ -6,14 +6,14 @@ title: >-
 slug: >-
   /generate-charts-in-html-using-amchart.js-and-convert-into-pdf-using-puppeteer-in-node
 draft: false
-date: 2019-04-03T12:07:42.317Z
+date: 2019-04-10T12:07:00.000Z
 description: >-
   Learn how to create charts using Amchart.js and customize it in HTML file and
   convert that file into PDF using puppeteer.
 category: Node.js
 tags:
   - Node.js
-  - PDF
+  - Pdf
   - Puppeteer
   - Amchart.js
   - Charts
@@ -199,9 +199,21 @@ There is not much difference into ejs and htlm file. Please click on the link to
 Here, we are taking ejs file as an input with some dynamic value and convert into HTML file. Please look at the below piece of code - 
 
 ```js
- const data = {uniqueUsersDataArray:[{"app":"Quora","image":"https://qphs2.fs.quoracdn.net/main-qimg-bba34c5494cd15bbe9ba9c29d47740be.webp","usersCount":16},{"app":"Bcbe learn","image":"https://qphs2.fs.quoracdn.net/main-qimg-bba34c5494cd15bbe9ba9c29d47740be.webp","usersCount":13},{"app":"Wikipedia","image":"https://qphs2.fs.quoracdn.net/main-qimg-bba34c5494cd15bbe9ba9c29d47740be.webp","usersCount":10},{"app":"XtraMath","image":"https://qphs2.fs.quoracdn.net/main-qimg-bba34c5494cd15bbe9ba9c29d47740be.webp","usersCount":2},{"app":"Absolute","image":"https://qphs2.fs.quoracdn.net/main-qimg-bba34c5494cd15bbe9ba9c29d47740be.webp","usersCount":5},{"app":"iPrism Web filt...","image":"https://qphs2.fs.quoracdn.net/main-qimg-bba34c5494cd15bbe9ba9c29d47740be.webp","usersCount":5},{"app":"Amazon","image":"https://qphs2.fs.quoracdn.net/main-qimg-bba34c5494cd15bbe9ba9c29d47740be.webp","usersCount":11},{"app":"YouTube","image":"https://qphs2.fs.quoracdn.net/main-qimg-bba34c5494cd15bbe9ba9c29d47740be.webp","usersCount":20},{"app":"Lynda","image":"https://qphs2.fs.quoracdn.net/main-qimg-bba34c5494cd15bbe9ba9c29d47740be.webp","usersCount":4},{"app":"ABCya1","image":"https://qphs2.fs.quoracdn.net/main-qimg-bba34c5494cd15bbe9ba9c29d47740be.webp","usersCount":6}]} const filePathName = path.resolve(__dirname, 'filename.ejs');
+const data = {uniqueUsersDataArray:[{"app":"Quora","image":"https://qphs2.fs.quoracdn.net/main-qimg-bba34c5494cd15bbe9ba9c29d47740be.webp","usersCount":16},
+                                    {"app":"Bcbe learn","image":"https://qphs2.fs.quoracdn.net/main-qimg-bba34c5494cd15bbe9ba9c29d47740be.webp","usersCount":13},
+                                    {"app":"Wikipedia","image":"https://qphs2.fs.quoracdn.net/main-qimg-bba34c5494cd15bbe9ba9c29d47740be.webp","usersCount":10},
+                                    {"app":"XtraMath","image":"https://qphs2.fs.quoracdn.net/main-qimg-bba34c5494cd15bbe9ba9c29d47740be.webp","usersCount":2},
+                                    {"app":"Absolute","image":"https://qphs2.fs.quoracdn.net/main-qimg-bba34c5494cd15bbe9ba9c29d47740be.webp","usersCount":5},
+                                    {"app":"iPrism Web filt...","image":"https://qphs2.fs.quoracdn.net/main-qimg-bba34c5494cd15bbe9ba9c29d47740be.webp","usersCount":5},
+                                    {"app":"Amazon","image":"https://qphs2.fs.quoracdn.net/main-qimg-bba34c5494cd15bbe9ba9c29d47740be.webp","usersCount":11},
+                                    {"app":"YouTube","image":"https://qphs2.fs.quoracdn.net/main-qimg-bba34c5494cd15bbe9ba9c29d47740be.webp","usersCount":20},
+                                    {"app":"Lynda","image":"https://qphs2.fs.quoracdn.net/main-qimg-bba34c5494cd15bbe9ba9c29d47740be.webp","usersCount":4},
+                                    {"app":"ABCya1","image":"https://qphs2.fs.quoracdn.net/main-qimg-bba34c5494cd15bbe9ba9c29d47740be.webp","usersCount":6}]} 
+
+const filePathName = path.resolve(__dirname, 'filename.ejs');
 const htmlString = fs.readFileSync(filePathName).toString();
-const template = ejs.compile(htmlString);return template(data); //data which you want to put dynamically in ejs like dataprovider values in charts.
+const template = ejs.compile(htmlString);
+return template(data); //data which you want to put dynamically in ejs like dataprovider values in charts.
 ```
 
 ## 3. Puppeteer -
