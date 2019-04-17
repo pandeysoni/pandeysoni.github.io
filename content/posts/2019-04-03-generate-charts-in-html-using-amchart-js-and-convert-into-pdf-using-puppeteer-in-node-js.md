@@ -1,8 +1,8 @@
 ---
 template: post
 title: >-
-  Generate Charts in HTML using Amchart.js and convert into PDF using Puppeteer
-  in Node.js
+  Generate Charts in HTML using Amchart.js and Generate PDF using Puppeteer in
+  Node.js
 slug: >-
   /generate-charts-in-html-using-amchart.js-and-convert-into-pdf-using-puppeteer-in-node
 draft: false
