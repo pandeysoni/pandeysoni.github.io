@@ -6,10 +6,8 @@ slug: >-
 draft: false
 date: '2016-03-05T22:40:32.169Z'
 description: >-
-  I assume, that you have [node.js](http://nodejs.org) already installed. We
-  will create a basic structure using the express generator. Great. Now we've
-  got Express & the generator installed as a global command on our system. Use
-  below command to create express basic structure ...
+  Learn How to perform RESTful API in Node.js using Express Framework. Here we
+  are using MongoDB as a database.
 category: Javascript
 tags:
   - Node.js
