@@ -22,7 +22,7 @@ Puppeteer can be used for different purposes -
 3. Capture screenshots in pdf or image format of a website. 
 4. Performance testing of a website.
 
-In the last [article ](https://thepandeysoni.org/generate-charts-in-html-using-amchart.js-and-convert-into-pdf-using-puppeteer-in-node)gone through the steps that how can we generate pdf of any HTML page and can be used for report purposes.
+In the last article, we saw the steps how we can generate pdf of any HTML page and can be used for report purposes.
 
 Here we'll cover 2nd point, how we can extract the website data and map the extracted data into JSON format.
 
@@ -35,7 +35,7 @@ Here we'll cover 2nd point, how we can extract the website data and map the extr
 
 ## Get Started
 
-Here We'll scrape google search website data content -\
+Here, we'll scrape google search website data content -\
 NOTE - The output list could be vary.
 
 ```
@@ -74,7 +74,7 @@ try {
 }
 ```
 
-The output json will look like this -
+The output json will look as shown below -
 
 ```
 [ { title: 'Node.js Tutorial - W3Schools',
@@ -111,4 +111,4 @@ You can prepare JSON as per your need.
 
 ## Conclusion
 
-There is other modules (cheerio, cypress etc.) available for scrapping. Puppeteer is one good option for scrapping the data and we can actually observe the website and map the data into JSON.
+There are other modules (cheerio, cypress etc.) available for scrapping. Puppeteer is a good option for scrapping the data and we can actually observe the website and map the data into JSON.
