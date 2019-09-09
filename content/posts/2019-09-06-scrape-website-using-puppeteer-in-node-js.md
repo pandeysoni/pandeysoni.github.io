@@ -1,10 +1,10 @@
 ---
 template: post
-title: Scrape website using puppeteer in node.js
+title: Scrape website using Puppeteer in Node.js
 slug: /2019/09/09/scrape-website-using-puppeteer
 draft: false
 date: 2019-09-09T06:49:00.000Z
-description: How to scrape a website using Puppeteer in node.js
+description: How to scrape a website using Puppeteer in Node.js
 category: 'Node.js, Puppeteer'
 tags:
   - Scrappere
