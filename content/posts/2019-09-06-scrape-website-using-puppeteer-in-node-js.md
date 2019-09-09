@@ -35,9 +35,10 @@ Here we'll cover 2nd point, how can we extract the website data and map into jso
 1. Javascript knowledge
 2. Node.js installed (version 8.10 and above)
 
-## How to scrape website data and map into json
+## Get Started
 
-Here I'll scrape google search website data content -
+Here We'll scrape google search website data content -\
+NOTE - The output list can be vary.
 
 ```
 const puppeteer = require('puppeteer');
@@ -74,5 +75,40 @@ try {
     console.error(err);
 }
 ```
+
+The output json will look like this -
+
+```
+[ { title: 'Node.js Tutorial - W3Schools',
+    link: 'https://www.w3schools.com/nodejs/' },
+  { title: 'Node.js Tutorial - Tutorialspoint',
+    link: 'https://www.tutorialspoint.com/nodejs/index.htm' },
+  { title: 'Node.js Tutorial: Learn in 3 Days - Guru99',
+    link: 'https://www.guru99.com/node-js-tutorial.html' },
+  { title: 'Learn Node.js Tutorial - javaTpoint',
+    link: 'https://www.javatpoint.com/nodejs-tutorial' },
+  { title: 'Node.js Tutorial | All You Need To Know About Node.js ...',
+    link: 'https://www.edureka.co/blog/nodejs-tutorial/' },
+  { title: 'Node.js Tutorials - For beginners and professionals',
+    link: 'https://www.tutorialsteacher.com/nodejs/nodejs-tutorials' },
+  { title: 'Learn Node.js | Codecademy',
+    link: 'https://www.codecademy.com/learn/learn-node-js' },
+  { title:
+     'Learn Node.js: Tutorials for Programmers of All Levels - Stackify',
+    link: 'https://stackify.com/learn-nodejs-tutorials/' },
+  { title: '',
+    link:
+     'https://medium.com/quick-code/top-10-reason-why-you-should-use-node-js-5926b4d1f2c1' },
+  { title: '',
+    link:
+     'https://hostpresto.com/blog/should-i-learn-django-or-node-js/' },
+  { title: '',
+    link: 'https://www.tutorialspoint.com/nodejs/nodejs_introduction' },
+  { title: '',
+    link:
+     'https://www.quora.com/What-are-the-best-resources-for-learning-Node-js' } ]
+```
+
+You can prepare JSON as per your need.
 
 ## Conclusion
