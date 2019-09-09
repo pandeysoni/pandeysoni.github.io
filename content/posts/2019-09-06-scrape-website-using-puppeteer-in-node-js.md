@@ -7,11 +7,9 @@ date: 2019-09-09T06:49:00.000Z
 description: How to scrape a website using puppeteer in node.js
 category: 'Node.js, Puppeteer'
 tags:
-  - Scrape
+  - Scrappere
   - Puppeteer
   - node.js
-  - scrapper
-  - best scrapper
 ---
 ## **Overview**
 
