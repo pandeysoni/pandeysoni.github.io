@@ -35,8 +35,36 @@ Here we'll cover 2nd point, how we can extract the website data and map the extr
 
 ## Get Started
 
-Here, we'll scrape google search website data content -\
-NOTE - The output list could be vary.
+**What does it mean by web-scrapping?**
+
+Pull out the other website data  using scrapping method. Like, Google do crawling of other sites and use that in SEO engine, so Google have all information about other websites.
+
+![](/media/google-search.png)
+
+Here, we'll scrape google search website data content - We will analyze the DOM content and basis on that we do evaluation and extract the data from there. The DOM pattern is as shown below image - 
+
+![](/media/google-search-dom-d.png)
+
+This above image shows that className "rc" is one div and from there we could get title and link of one item and this way we can select all classes which is having className "rc" and we can get all list of searched for page 1.
+
+```
+ const list = await page.evaluate(() => {
+            let data = []
+
+            /** this can be changed for other website.*/
+            const list = document.querySelectorAll('.rc .r');
+            for (const a of list) {
+                data.push({
+                    'title': a.querySelector('.LC20lb').innerText.trim().replace(/(\r\n|\n|\r)/gm, " "),
+                    'link': a.querySelector('a').href
+                })
+            }
+            return data;
+        })
+        console.log(list);
+```
+
+list variable will have items of 1st page search result. We can extract the search data of multiple pages to make this function recursive.  
 
 ```
 const puppeteer = require('puppeteer');
@@ -74,7 +102,8 @@ try {
 }
 ```
 
-The output json will look as shown below -
+The output json will look as shown below -\
+NOTE - The output list could be vary.
 
 ```
 [ { title: 'Node.js Tutorial - W3Schools',
