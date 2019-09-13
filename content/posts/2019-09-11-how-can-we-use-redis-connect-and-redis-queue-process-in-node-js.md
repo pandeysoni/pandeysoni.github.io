@@ -2,8 +2,8 @@
 template: post
 title: How can we use Redis Connect and Redis Queue process in Node.js?
 slug: /how-can-we-use-redis-connect-and-redis-queue-process-in-nodejs
-draft: true
-date: 2019-09-11T06:05:24.482Z
+draft: false
+date: 2019-09-13T06:05:24.482Z
 description: How can we use Redis Connect and Redis Queue in a best way in Node.js?
 category: 'Node.js, Redis'
 tags:
@@ -54,7 +54,7 @@ redisClient.on("ready", (err) => {
 
 **Redis Queue Mechanism - **
 
-We have to process the data in sequential manner one after another in one key and one key's value will have complete list. We'll push the data from right side and pop the data from left side and get the left most data in list. Here we'll use lrange, lpop, rpush method of redis to perofrm this queue mechanism. Please take a look to below image for more clarification - 
+We have to process the data in sequential manner one after another in one key and one key's value will have complete list. We'll push the data from right side and pop the data from left side and get the left most data from list. Here we'll use lrange, lpop, rpush method of redis to perofrm this queue mechanism. Please take a look to below image for more clarification - 
 
 ![](/media/untitled-diagram-7-.jpg)
 
