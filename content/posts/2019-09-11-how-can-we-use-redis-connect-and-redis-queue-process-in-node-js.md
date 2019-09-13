@@ -2,7 +2,7 @@
 template: post
 title: How can we use Redis Queue mechanism in Node.js?
 slug: /how-can-we-use-redis-queue-mechanism-in-nodejs
-draft: true
+draft: false
 date: 2019-09-13T06:05:24.482Z
 description: How can we use Redis Queue in a best way in Node.js?
 category: 'Node.js, Redis'
