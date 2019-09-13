@@ -58,7 +58,7 @@ We have to process the data in sequential manner one after another in one key an
 
 ![](/media/untitled-diagram-7-.jpg)
 
-**rpush method - ** 
+**rpush method -** 
 We can push one or multiple item in one chunk.
 
 ```
@@ -73,7 +73,7 @@ redisClient.rpush(['test-key', "l1", "l2"], function (err, reply) {
 });
 ```
 
-**lrange method - ** 
+**lrange method -** 
 We can retrieve list of data from this method, starting index would be 0.
 
 This will give 1st left value -
@@ -100,7 +100,7 @@ redisClient.lrange('test-key', 0, -1, function (err, reply) {
 });
 ```
 
-**lpop method - ** 
+**lpop method -** 
 This will delete most left element from the queue - 
 
 ```
