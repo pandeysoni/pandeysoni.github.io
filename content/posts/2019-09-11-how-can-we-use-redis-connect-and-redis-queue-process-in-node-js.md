@@ -52,7 +52,7 @@ redisClient.on("ready", (err) => {
 });
 ```
 
-**Redis Queue Mechanism - **
+**Redis Queue Mechanism -**
 
 We have to process the data in sequential manner one after another in one key and one key's value will have complete list. We'll push the data from right side and pop the data from left side and get the left most data from list. Here we'll use lrange, lpop, rpush method of redis to perofrm this queue mechanism. Please take a look to below image for more clarification - 
 
