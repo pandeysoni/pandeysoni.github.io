@@ -2,7 +2,7 @@
 template: post
 title: How can we use Redis Queue mechanism in Node.js?
 slug: /how-can-we-use-redis-queue-mechanism-in-nodejs
-draft: false
+draft: true
 date: 2019-09-13T06:05:24.482Z
 description: How can we use Redis Queue in a best way in Node.js?
 category: 'Node.js, Redis'
@@ -54,12 +54,12 @@ redisClient.on("ready", (err) => {
 
 **Redis Queue Mechanism -**
 
-We have to process the data in sequential manner one after another in one key and one key's value will have complete list. We'll push the data from right side and pop the data from left side and get the left most data from list. Here we'll use lrange, lpop, rpush method of redis to perofrm this queue mechanism. Please take a look to below image for more clarification - 
+We have to process the data in sequential manner one after another in one key and one key's value will have complete list. We'll push the data from right side and pop the data from left side and get the left most data from list. Here we'll use lrange, lpop, rpush method of redis to perofrm this queue mechanism. Please take a look at below image for more clarification - 
 
 ![](/media/untitled-diagram-7-.jpg)
 
 **rpush method -** 
-We can push one or multiple item in one chunk.
+We can push one or multiple item in one chunk. 'test-key' is redis key index name.
 
 ```
 redisClient.rpush(['test-key', "l1"], function (err, reply) {
@@ -74,9 +74,9 @@ redisClient.rpush(['test-key', "l1", "l2"], function (err, reply) {
 ```
 
 **lrange method -** 
-We can retrieve list of data from this method, starting index would be 0.
+We can retrieve list of data from this method, with starting index 0.
 
-This will give 1st left value, since we have passed end value as 0 -
+This will give the left most value of the key 'test-key', since we have passed end value as 0 -
 
 ```
 redisClient.lrange('test-key', 0, 0, function (err, reply) {
@@ -84,7 +84,7 @@ redisClient.lrange('test-key', 0, 0, function (err, reply) {
 });
 ```
 
-This will give 2 left values, since we have passed end value as 1 -
+Now, we will get 2 values from the left of the key 'test-key', since we have passed end value as 1 -
 
 ```
 redisClient.lrange('test-key', 0, 1, function (err, reply) {
