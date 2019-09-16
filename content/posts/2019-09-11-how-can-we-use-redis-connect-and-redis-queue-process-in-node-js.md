@@ -2,7 +2,7 @@
 template: post
 title: How can we use Redis Queue mechanism in Node.js?
 slug: /how-can-we-use-redis-queue-mechanism-in-nodejs
-draft: true
+draft: false
 date: 2019-09-13T06:05:24.482Z
 description: How can we use Redis Queue in a best way in Node.js?
 category: 'Node.js, Redis'
@@ -15,11 +15,11 @@ tags:
 
 In this article, we'll learn about redis queue mechanism. 
 
-We have to process the data in sequential manner one after another, then we can think about queue mechanism. 
+There was one requirement, where we had to process the data in sequential manner one after another, then we thought about queue mechanism. The challenge was that we were not able to find how to write redis methods (lrange, lpop, lpush) in Node.js. Here, we have written redis commands (lrange, lpop, lpush) in node.js and that worked pretty well for us. Let's take a look to these methods in Node.js - 
 
 ## Get Started
 
-First we'll init package file and then will install redis there-
+First we'll init package file and then will install redis package there -
 
 ```
 mkdir redis-app
@@ -28,7 +28,7 @@ npm init
 npm install --save redis
 ```
 
-create new file in redis-app folder, we'll try to connect with redis-server there (index.js) - 
+Now, create new file in redis-app folder with the name of index.js, there we'll try to connect with redis-server (index.js) - 
 
 ```
 const redis = require("redis");
@@ -59,7 +59,7 @@ We have to process the data in sequential manner one after another in one key an
 ![](/media/untitled-diagram-7-.jpg)
 
 **rpush method -** 
-We can push one or multiple item in one chunk. 'test-key' is redis key index name.
+rpush method allows us to push one or multiple items to redis key. _Here, our key name is 'test-key'._
 
 ```
 redisClient.rpush(['test-key', "l1"], function (err, reply) {
@@ -74,9 +74,9 @@ redisClient.rpush(['test-key', "l1", "l2"], function (err, reply) {
 ```
 
 **lrange method -** 
-We can retrieve list of data from this method, with starting index 0.
+lrange method allows us to retrieve list of data from this method, with starting index 0.
 
-This will give the left most value of the key 'test-key', since we have passed end value as 0 -
+This will give the left most value of the key 'test-key', since we have passed start and end value as 0.
 
 ```
 redisClient.lrange('test-key', 0, 0, function (err, reply) {
@@ -84,7 +84,7 @@ redisClient.lrange('test-key', 0, 0, function (err, reply) {
 });
 ```
 
-Now, we will get 2 values from the left of the key 'test-key', since we have passed end value as 1 -
+Now, we will get 2 values from the left of the key 'test-key', since we have passed start value as 0 and end value as 1.
 
 ```
 redisClient.lrange('test-key', 0, 1, function (err, reply) {
@@ -92,7 +92,7 @@ redisClient.lrange('test-key', 0, 1, function (err, reply) {
 });
 ```
 
-This will give all values of key, since we have passed end value as -1 -
+This will give all values of key, since we have passed start value as 0 and end value as -1.
 
 ```
 redisClient.lrange('test-key', 0, -1, function (err, reply) {
@@ -101,7 +101,7 @@ redisClient.lrange('test-key', 0, -1, function (err, reply) {
 ```
 
 **lpop method -** 
-This will delete most left element from the queue - 
+lpop method allows us to delete most left element from the queue - 
 
 ```
 redisClient.lpop(['test-key'], function (err, reply) {
@@ -109,5 +109,8 @@ redisClient.lpop(['test-key'], function (err, reply) {
 });
 ```
 
+The same way, there is rpop method available which will work in a similar way as lpop, the only difference would be this will pop out the data from right side in place of left side from the queue list.
+
 ## Conclusion
-This way we can maintain queue in same redis-key. There is another methods available set(to set value for key), get(get value for key), del (delete key), rpop. 
+
+This way we have maintained queue in redis. There is another methods available set(to set value for key), get(get value for key), del (delete key) and many more.
